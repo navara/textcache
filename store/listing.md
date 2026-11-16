@@ -96,4 +96,16 @@ Upload `dist/textcache-<version>-store.zip` from `npm run pack:store`: the files
 
 ## Test instructions tab
 
-Nothing needed: no account or login. To try it, type a few lines into any multi-line text field (for example a comment box) and open the toolbar popup.
+Written in Simplified Technical English, 451 of the 500 characters the field allows. Checked on 2026-11-16: text typed into pastebin.com is saved.
+
+```text
+No account is necessary.
+1. Open https://pastebin.com/.
+2. Type two lines in the text field.
+3. Close the tab.
+4. Click the TextCache icon in the toolbar. The popup shows the text.
+5. Click "Copy". The clipboard contains the text.
+6. Click "Open full list". The full list shows the text.
+7. In the search field, type one word of the text. The list shows only that text.
+TextCache does not save password fields or search boxes. TextCache sends no data.
+```
