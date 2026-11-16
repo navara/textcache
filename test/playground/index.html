@@ -68,6 +68,15 @@ the bottom. Each field can also be typed into by hand. Run code: <code id="run">
     Two saved texts: the sent message is not overwritten by the next one.</p>
     <div id="f-send-slot"><div class="send" contenteditable="true"></div></div></section>
 
+<section id="s-search"><h2>12. Search boxes</h2>
+    <p class="expect">The first three are never saved: one-row text areas marked as search the ways real search engines do it, inside a form with
+    role="search" (Google, Bing, DuckDuckGo), with enterkeyhint="search" (Brave Search), with type="search" (Bing). The fourth is saved: a chat prompt
+    inside a search form, marked enterkeyhint="send" (DuckDuckGo's box in "Ask AI" mode).</p>
+    <form role="search" onsubmit="return false"><textarea id="f-search-landmark" rows="1" role="combobox" name="q"></textarea></form>
+    <textarea id="f-search-hint" rows="1" enterkeyhint="search" name="q"></textarea>
+    <textarea id="f-search-type" rows="1" type="search" name="q"></textarea>
+    <form role="search" onsubmit="return false"><textarea id="f-search-chat" rows="1" role="combobox" enterkeyhint="send" name="q"></textarea></form></section>
+
 <h2>Expected result of "Run all"</h2>
 <table id="expected">
     <thead><tr><th>Marker</th><th>Expected in the list</th></tr></thead>
@@ -125,6 +134,8 @@ the bottom. Each field can also be typed into by hand. Run code: <code id="run">
         ['big', 'yes, once, the short version only (ends in "short")'],
         ['blank', 'no (the field holds no marker; nothing new may appear for it)'],
         ['send', 'yes, twice: one ending in "first message", one ending in "a different second one"'],
+        ['search', 'no'],
+        ['searchchat', 'yes, once (the chat prompt inside a search form)'],
     ];
     const tbody = document.querySelector('#expected tbody');
     for (const [name, text] of expected) {
@@ -189,8 +200,14 @@ the bottom. Each field can also be typed into by hand. Run code: <code id="run">
         setText(emptied, `${marker('send')} and now a different second one`);
         await wait(SETTLE);
 
+        for (const id of ['f-search-landmark', 'f-search-hint', 'f-search-type']) {
+            setText(document.getElementById(id), `${marker('search')} typed into ${id}`);
+        }
+        setText(document.getElementById('f-search-chat'), `${marker('searchchat')} a question for the chat`);
+        await wait(SETTLE);
+
         // leaving the last field lets the extension finish whatever it does when a field is left
-        emptied.blur();
+        document.activeElement?.blur();
         await wait(SETTLE);
         state.textContent = 'done';
     }

@@ -18,7 +18,7 @@ Upload `dist/textcache-<version>-store.zip` from `npm run pack:store`: the files
 > • Finds any saved text by words from it, its page address or title
 > • Copies the text back with one click, also with its formatting from rich-text editors
 > • Can show only the texts saved on the site you are on, right from the toolbar button
-> • Never saves input fields such as passwords and logins; skips the sites you list
+> • Never saves input fields such as passwords and logins, nor search boxes; skips the sites you list
 > • Keeps the newest texts and cleans up older ones automatically; removes duplicate copies of the same text
 > • Exports everything as CSV
 > • Available in English, Čeština, Deutsch, Español, Français, Português (Brasil), Українська, 简体中文, 日本語, हिन्दी and العربية

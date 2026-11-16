@@ -209,6 +209,8 @@ async function playground(ctx, opt, url, copies) {
         const once = name => mine(name).length === 1;
         expect('textarea', once('textarea') && mine('textarea')[0].kind === 'text', 'once, kind text');
         expect('input', mine('input').length === 0, 'never saved');
+        expect('search', mine('search').length === 0, 'never saved');
+        expect('searchchat', once('searchchat'), 'once');
         expect('editor', once('editor') && mine('editor')[0].kind === 'html' && textOf(mine('editor')[0]).endsWith(' bold and plain'),
             'once, kind html, text ending "bold and plain"');
         expect('shadow', once('shadow'), 'once');
@@ -422,10 +424,10 @@ const noHorizontalScroll = page => page.evaluate(() => {
         assert.deepStrictEqual(await until(() => valuesFrom(opt, plainUrl), v => v.length === 1), ['typed on plain http'], 'not saved on a plain http page');
         step('on plain http://notes.example.test (not a secure context, no crypto.randomUUID in the page) a textarea is saved');
 
-        // the playground (test/playground/index.html): eleven scenarios run by the page itself, checked against its table of expected results
+        // the playground (test/playground/index.html): twelve scenarios run by the page itself, checked against its table of expected results
         const pg = await playground(ctx, opt, `${WEB}/playground?autorun`, 1);
         assert.deepStrictEqual(pg.failures, [], `playground run ${pg.run}`);
-        step(`playground run ${pg.run} with default settings: all eleven scenarios give the saved texts in the page's table of expected results`);
+        step(`playground run ${pg.run} with default settings: all twelve scenarios give the saved texts in the page's table of expected results`);
 
         // duplicate removal: the options switch and the clean-up preview, then the playground with it off
         await opt.bringToFront();

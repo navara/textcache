@@ -24,14 +24,35 @@ function oversize(text, maxBytes) {
     return size > maxBytes ? size : 0;
 }
 
-// The element whose text is saved for an input event target: a textarea, or the outermost editing host around the target. Never an <input>.
+// A search box, whatever element it is. The field's own marks decide first: role="searchbox", enterkeyhint="search" (Brave Search) or type="search"
+// (Bing) make it one, and any other enterkeyhint ("send", "enter") makes it a composer, as when DuckDuckGo turns its search box into a chat prompt
+// in place. Unmarked fields are search boxes inside a search landmark, role="search" or <search> (Google, Bing, DuckDuckGo), looked for across
+// open shadow roots too. role="combobox" alone is not enough: composers with @mention suggestions use it. A landmark in the parent document of a
+// frame is not seen.
+function isSearchField(element) {
+    const attr = name => element.getAttribute?.(name)?.trim().toLowerCase() ?? '';
+    const hint = attr('enterkeyhint');
+    if (attr('role').split(/\s+/).includes('searchbox') || hint === 'search' || attr('type') === 'search') return true;
+    if (hint) return false;
+    for (let node = element; node; node = node.getRootNode?.().host) {
+        if (node.closest?.('[role~="search" i], search')) return true;
+    }
+    return false;
+}
+
+// The element whose text is saved for an input event target: a textarea, or the outermost editing host around the target. Never an <input>, never a
+// search box.
 function fieldFor(target) {
     if (!target || target.nodeType !== 1) return null;
-    if (target.tagName === 'TEXTAREA') return { element: target, kind: 'text' };
-    if (!target.isContentEditable) return null;
-    let host = target;
-    while (host.parentElement?.isContentEditable) host = host.parentElement;
-    return { element: host, kind: 'html' };
+    let field = null;
+    if (target.tagName === 'TEXTAREA') {
+        field = { element: target, kind: 'text' };
+    } else if (target.isContentEditable) {
+        let host = target;
+        while (host.parentElement?.isContentEditable) host = host.parentElement;
+        field = { element: host, kind: 'html' };
+    }
+    return field && !isSearchField(field.element) ? field : null;
 }
 
 function readField({ element, kind }) {

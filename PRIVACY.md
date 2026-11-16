@@ -15,9 +15,9 @@ When you type into a multi-line text area or a rich-text editor on a web page, T
 
 It also stores your TextCache settings.
 
-TextCache never saves `<input>` fields, so it does not save passwords or the usual login forms. It does save every multi-line text area and
-rich-text editor, which includes some fields that look single-line, such as the search box of some search engines. For text typed into an embedded
-frame (some editors run in one), the frame's own address and title are stored.
+TextCache never saves `<input>` fields, so it does not save passwords or the usual login forms. It does not save search boxes either: text areas and
+editors inside a search form or marked as a search field, as the major search engines mark theirs. For text typed into an embedded frame (some editors
+run in one), the frame's own address and title are stored.
 
 It saves nothing on pages, or in embedded frames, whose own address contains an entry of the "Pages to skip" list in its settings. Empty fields are not
 saved.

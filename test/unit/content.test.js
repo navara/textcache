@@ -54,6 +54,43 @@ test('fieldFor: textarea, outermost editing host, never an input', () => {
     assert.equal(pure.fieldFor({ nodeType: 1, tagName: 'DIV', isContentEditable: false, parentElement: body }), null);
 });
 
+// a stand-in element: attributes, the selectors closest() matches within its own tree (those of its ancestors and itself), and the shadow host
+// whose root holds it, if any
+function element(fields, attrs = {}, landmarks = [], shadowHost = null) {
+    return {
+        nodeType: 1, isContentEditable: false, parentElement: null, ...fields,
+        getAttribute: name => (name in attrs ? attrs[name] : null),
+        closest: selector => (selector.split(',').map(s => s.trim()).some(s => landmarks.includes(s)) ? {} : null),
+        getRootNode: () => (shadowHost ? { host: shadowHost } : {}),
+    };
+}
+const LANDMARK = '[role~="search" i]';
+
+test('fieldFor: search boxes are never saved, other textareas and editors are', () => {
+    const area = (attrs, landmarks) => pure.fieldFor(element({ tagName: 'TEXTAREA' }, attrs, landmarks));
+    assert.equal(area({ role: 'combobox', rows: '1', name: 'q' }, [LANDMARK]), null, 'Google: textarea in a form with role=search');
+    assert.equal(area({ name: 'q', type: 'search', role: 'combobox' }), null, 'Bing: type=search');
+    assert.equal(area({ enterkeyhint: 'search', rows: '1', name: 'q' }), null, 'Brave Search: enterkeyhint=search');
+    assert.equal(area({ enterkeyhint: ' Search ' }), null, 'attribute values are compared trimmed and lower-case');
+    assert.equal(area({ role: 'searchbox' }), null);
+    assert.equal(area({ role: 'searchbox textbox' }), null, 'role is a token list');
+    assert.ok(area({ enterkeyhint: 'send', role: 'combobox', name: 'q' }, [LANDMARK]), 'DuckDuckGo in chat mode: own enterkeyhint beats the landmark');
+    assert.equal(area({ enterkeyhint: 'search' }, [LANDMARK]), null, 'DuckDuckGo in search mode');
+    const component = element({ tagName: 'MY-SEARCH' }, {}, [LANDMARK]);
+    assert.equal(pure.fieldFor(element({ tagName: 'TEXTAREA' }, {}, [], component)), null, 'landmark outside the shadow root it sits in');
+    assert.ok(pure.fieldFor(element({ tagName: 'TEXTAREA' }, {}, [], element({ tagName: 'MY-EDITOR' }))), 'shadow root without a landmark');
+    assert.equal(area({}, ['search']), null, 'inside a <search> element');
+    assert.ok(area({ role: 'combobox', rows: '1' }), 'a combobox alone (mention suggestions) is still saved');
+    assert.ok(area({ rows: '1', enterkeyhint: 'send' }), 'a one-row chat box is still saved');
+    assert.ok(area({}), 'a plain textarea is still saved');
+
+    const body = element({ tagName: 'BODY' });
+    const editor = element({ tagName: 'DIV', isContentEditable: true, parentElement: body }, { role: 'searchbox' });
+    assert.equal(pure.fieldFor(editor), null, 'an editing host marked as a search box');
+    const inside = element({ tagName: 'B', isContentEditable: true, parentElement: editor });
+    assert.equal(pure.fieldFor(inside), null, 'decided by the outermost editing host');
+});
+
 test('isBlank', () => {
     assert.equal(pure.isBlank(' \n\t'), true);
     assert.equal(pure.isBlank(' a '), false);
