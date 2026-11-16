@@ -1,0 +1,296 @@
+{
+   "app_name": {
+      "message": "TextCache"
+   },
+   "badge_save_failed": {
+      "message": "TextCache सहेज नहीं सका: $1"
+   },
+   "badge_too_large": {
+      "message": "TextCache ने इस टैब में एक टेक्स्ट नहीं सहेजा: उसका आकार ($1) सीमा ($2) से ज़्यादा है"
+   },
+   "confirm_cancel": {
+      "message": "रद्द करें"
+   },
+   "confirm_delete_all": {
+      "message": "सभी सहेजे गए टेक्स्ट मिटाएँ (कुल: $1)? मिटाए गए टेक्स्ट वापस नहीं लाए जा सकते। आपकी सेटिंग्स जैसी हैं वैसी ही रहेंगी।"
+   },
+   "confirm_delete_all_ok": {
+      "message": "सभी मिटाएँ"
+   },
+   "confirm_delete_selected": {
+      "message": "चुने गए सहेजे गए टेक्स्ट मिटाएँ ($1)? मिटाए गए टेक्स्ट वापस नहीं लाए जा सकते।"
+   },
+   "confirm_delete_selected_ok": {
+      "message": "चुने गए मिटाएँ"
+   },
+   "copy": {
+      "message": "कॉपी करें"
+   },
+   "day_today": {
+      "message": "आज"
+   },
+   "day_unknown": {
+      "message": "कोई तारीख नहीं"
+   },
+   "day_yesterday": {
+      "message": "कल"
+   },
+   "delete": {
+      "message": "मिटाएँ"
+   },
+   "empty_hint": {
+      "message": "किसी भी वेब पेज पर टेक्स्ट बॉक्स या रिच-टेक्स्ट एडिटर में लिखें, और वह टेक्स्ट यहाँ दिखेगा।"
+   },
+   "empty_title": {
+      "message": "अभी तक कुछ नहीं सहेजा गया"
+   },
+   "entry_untitled": {
+      "message": "बिना शीर्षक का पेज"
+   },
+   "ext_description": {
+      "message": "टेक्स्ट फ़ील्ड में आप जो लिखते हैं उसे सहेजता है, ताकि उसे वापस पाया जा सके।"
+   },
+   "kind_formatted": {
+      "message": "फ़ॉर्मैट किया हुआ"
+   },
+   "list_copy_html": {
+      "message": "HTML के रूप में कॉपी करें"
+   },
+   "list_copy_text": {
+      "message": "टेक्स्ट कॉपी करें"
+   },
+   "list_count": {
+      "message": "सहेजे गए टेक्स्ट: $1"
+   },
+   "list_count_filtered": {
+      "message": "दिखाए जा रहे: $2 में से $1"
+   },
+   "list_delete_all": {
+      "message": "सभी मिटाएँ"
+   },
+   "list_delete_selected": {
+      "message": "चुने गए मिटाएँ ($1)"
+   },
+   "list_detail_meta": {
+      "message": "आख़िरी बदलाव: $1, शुरुआत: $2, वर्ण: $3, $4"
+   },
+   "list_detail_none": {
+      "message": "यहाँ पढ़ने के लिए सूची से कोई सहेजा गया टेक्स्ट चुनें।"
+   },
+   "list_formatted_label": {
+      "message": "फ़ॉर्मैटिंग के साथ सहेजा गया टेक्स्ट"
+   },
+   "list_no_matches": {
+      "message": "कोई सहेजा गया टेक्स्ट मेल नहीं खाता"
+   },
+   "list_no_matches_hint": {
+      "message": "कम या छोटे शब्द आज़माएँ। खोज पता, पेज का शीर्षक और टेक्स्ट देखती है।"
+   },
+   "list_search_label": {
+      "message": "सहेजे गए टेक्स्ट में खोजें"
+   },
+   "list_search_placeholder": {
+      "message": "पता, शीर्षक और टेक्स्ट में खोजें"
+   },
+   "list_select_all": {
+      "message": "दिखाए गए सभी चुनें"
+   },
+   "list_select_one": {
+      "message": "$1 चुनें"
+   },
+   "list_show_formatting": {
+      "message": "फ़ॉर्मैटिंग दिखाएँ"
+   },
+   "list_text_label": {
+      "message": "सहेजा गया टेक्स्ट"
+   },
+   "list_title": {
+      "message": "सहेजे गए टेक्स्ट"
+   },
+   "load_failed": {
+      "message": "सहेजे गए टेक्स्ट लोड नहीं हो सके: $1"
+   },
+   "nav_label": {
+      "message": "पेज"
+   },
+   "nav_list": {
+      "message": "सहेजे गए टेक्स्ट"
+   },
+   "nav_settings": {
+      "message": "सेटिंग्स"
+   },
+   "options_autoClean": {
+      "message": "पुराने सहेजे गए टेक्स्ट अपने आप मिटाएँ"
+   },
+   "options_autoClean_desc": {
+      "message": "सफ़ाई ब्राउज़र शुरू होने पर और हर घंटे एक बार चलती है। मिटाए गए टेक्स्ट वापस नहीं लाए जा सकते।"
+   },
+   "options_dedupe": {
+      "message": "एक ही टेक्स्ट की पुरानी कॉपियाँ हटाएँ"
+   },
+   "options_dedupe_desc": {
+      "message": "जब दो सहेजे गए टेक्स्ट में एक ही टेक्स्ट हो, तो सिर्फ़ सबसे हाल में बदला गया रखा जाता है, चाहे वह किसी भी पेज से आया हो। यह तब होता है जब आप टेक्स्ट फ़ील्ड छोड़ते हैं, और हर सफ़ाई के साथ।"
+   },
+   "options_deleteAll": {
+      "message": "सभी सहेजे गए टेक्स्ट मिटाएँ"
+   },
+   "options_deleteAll_button": {
+      "message": "सभी सहेजे गए टेक्स्ट मिटाएँ"
+   },
+   "options_deleteAll_desc": {
+      "message": "सभी सहेजे गए टेक्स्ट एक साथ हटाता है। आपकी सेटिंग्स और छोड़े जाने वाले पेजों की सूची बनी रहती है।"
+   },
+   "options_export": {
+      "message": "सभी सहेजे गए टेक्स्ट एक्सपोर्ट करें"
+   },
+   "options_export_button": {
+      "message": "CSV एक्सपोर्ट करें"
+   },
+   "options_export_desc": {
+      "message": "हर सहेजे गए टेक्स्ट का पता, शीर्षक, समय और सामग्री वाली CSV फ़ाइल डाउनलोड करता है।"
+   },
+   "options_group_cleanup": {
+      "message": "सफ़ाई"
+   },
+   "options_group_display": {
+      "message": "प्रदर्शन"
+   },
+   "options_group_saving": {
+      "message": "सहेजना"
+   },
+   "options_group_saving_intro": {
+      "message": "टेक्स्ट बॉक्स और रिच-टेक्स्ट एडिटर हर बदलाव के थोड़ी देर बाद सहेजे जाते हैं, बदलाव चाहे जैसे भी हुआ हो: टाइप करके, पेस्ट करके, बोलकर या ऑटोकरेक्ट से। एक पंक्ति वाले फ़ील्ड, जैसे खोज बॉक्स और लॉगिन फ़ॉर्म, कभी नहीं सहेजे जाते। यहाँ किए गए बदलाव खुले पेजों पर तुरंत लागू होते हैं।"
+   },
+   "options_group_storage": {
+      "message": "स्टोरेज"
+   },
+   "options_invalid_keep": {
+      "message": "1 या उससे बड़ी पूर्ण संख्या डालें। यह मान सहेजा नहीं गया।"
+   },
+   "options_invalid_size": {
+      "message": "0 या उससे बड़ी पूर्ण संख्या डालें। यह मान सहेजा नहीं गया।"
+   },
+   "options_keepNewest": {
+      "message": "सबसे नए इतने रखें"
+   },
+   "options_keepNewest_desc": {
+      "message": "सफ़ाई सबसे हाल में बदले गए इतने सहेजे गए टेक्स्ट रखती है और बाकी मिटा देती है।"
+   },
+   "options_language": {
+      "message": "दिखाने की भाषा"
+   },
+   "options_language_auto": {
+      "message": "अपने आप (ब्राउज़र की भाषा): $1"
+   },
+   "options_language_desc": {
+      "message": "अपने आप वाला विकल्प आपके ब्राउज़र की भाषा इस्तेमाल करता है, और अगर TextCache में वह भाषा नहीं है तो अंग्रेज़ी।"
+   },
+   "options_lead": {
+      "message": "TextCache टेक्स्ट बॉक्स में आपके लिखे की एक कॉपी रखता है, ताकि पेज क्रैश होने या फ़ॉर्म खो जाने पर आप उसे वापस पा सकें। यहाँ किया गया हर बदलाव तुरंत सहेजा जाता है।"
+   },
+   "options_maxItemKb": {
+      "message": "सहेजा जाने वाला सबसे बड़ा टेक्स्ट"
+   },
+   "options_maxItemKb_desc": {
+      "message": "इससे बड़ा टेक्स्ट सहेजा नहीं जाता: सीमा में आने वाला आख़िरी संस्करण रखा जाता है, और उस टैब पर टूलबार आइकन एक बैज दिखाता है। रिच-टेक्स्ट एडिटर में फ़ॉर्मैटिंग (HTML) भी आकार में गिनी जाती है। 0 का मतलब है कोई सीमा नहीं।"
+   },
+   "options_popupWidth": {
+      "message": "पॉप-अप की चौड़ाई"
+   },
+   "options_popupWidth_desc": {
+      "message": "टूलबार आइकन से खुलने वाली विंडो कितनी चौड़ी हो। यह अगली बार पॉप-अप खुलने पर लागू होता है।"
+   },
+   "options_popupWidth_narrow": {
+      "message": "संकरा"
+   },
+   "options_popupWidth_normal": {
+      "message": "सामान्य"
+   },
+   "options_popupWidth_wide": {
+      "message": "चौड़ा"
+   },
+   "options_preview_none": {
+      "message": "इन सेटिंग्स के साथ अगली सफ़ाई कुछ नहीं मिटाएगी। सहेजे गए टेक्स्ट: $1।"
+   },
+   "options_preview_off": {
+      "message": "अपने आप सफ़ाई बंद है, इसलिए सहेजे गए टेक्स्ट तभी मिटते हैं जब आप उन्हें मिटाते हैं।"
+   },
+   "options_preview_some": {
+      "message": "इन सेटिंग्स के साथ अगली सफ़ाई $2 सहेजे गए टेक्स्ट में से $1 मिटाएगी।"
+   },
+   "options_skip": {
+      "message": "छोड़े जाने वाले पेज"
+   },
+   "options_skip_desc": {
+      "message": "हर पंक्ति में एक प्रविष्टि। जिस पेज के पते में कहीं भी कोई प्रविष्टि हो, वहाँ कुछ नहीं सहेजा जाता, इसलिए slack.com में app.slack.com भी आ जाता है। एम्बेड किए गए फ़्रेम उनके अपने पते से जाँचे जाते हैं।"
+   },
+   "options_skip_save": {
+      "message": "सूची सहेजें"
+   },
+   "options_title": {
+      "message": "TextCache सेटिंग्स"
+   },
+   "options_unit_kb": {
+      "message": "KB"
+   },
+   "options_unit_texts": {
+      "message": "सहेजे गए टेक्स्ट"
+   },
+   "options_usage_count": {
+      "message": "सहेजे गए टेक्स्ट"
+   },
+   "options_usage_space": {
+      "message": "इस्तेमाल हुई जगह"
+   },
+   "options_usage_space_of": {
+      "message": "$2 में से $1"
+   },
+   "popup_back": {
+      "message": "सभी सहेजे गए टेक्स्ट"
+   },
+   "popup_copy_one": {
+      "message": "$1 पर सहेजा गया टेक्स्ट कॉपी करें"
+   },
+   "popup_detail_meta": {
+      "message": "$1, आख़िरी बदलाव: $2"
+   },
+   "popup_more": {
+      "message": "यहाँ $2 में से सबसे नए $1 दिखाए गए हैं। पूरी सूची में सभी हैं।"
+   },
+   "popup_none_here": {
+      "message": "इस साइट पर कुछ नहीं सहेजा गया"
+   },
+   "popup_none_here_hint": {
+      "message": "हर जगह सहेजे गए टेक्स्ट देखने के लिए “यह साइट” बंद करें।"
+   },
+   "popup_open_list": {
+      "message": "पूरी सूची खोलें"
+   },
+   "popup_this_site": {
+      "message": "यह साइट"
+   },
+   "status_copied": {
+      "message": "कॉपी किया गया"
+   },
+   "status_deleted": {
+      "message": "मिटाए गए: $1"
+   },
+   "status_deleted_all": {
+      "message": "सभी सहेजे गए टेक्स्ट मिटा दिए गए"
+   },
+   "status_failed": {
+      "message": "यह नहीं हो सका: $1"
+   },
+   "status_not_saved": {
+      "message": "सहेजा नहीं गया: $1"
+   },
+   "status_saved": {
+      "message": "सहेजा गया"
+   },
+   "time_just_now": {
+      "message": "अभी-अभी"
+   },
+   "time_unknown": {
+      "message": "अज्ञात"
+   }
+}

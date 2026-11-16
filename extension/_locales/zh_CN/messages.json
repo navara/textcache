@@ -1,0 +1,296 @@
+{
+   "app_name": {
+      "message": "TextCache"
+   },
+   "badge_save_failed": {
+      "message": "TextCache 无法保存：$1"
+   },
+   "badge_too_large": {
+      "message": "TextCache 未保存此标签页中的一段文本：其大小（$1）超过上限（$2）"
+   },
+   "confirm_cancel": {
+      "message": "取消"
+   },
+   "confirm_delete_all": {
+      "message": "要删除所有已保存的文本（共 $1 条）吗？删除的文本无法恢复。您的设置保持不变。"
+   },
+   "confirm_delete_all_ok": {
+      "message": "全部删除"
+   },
+   "confirm_delete_selected": {
+      "message": "要删除选中的已保存的文本（$1 条）吗？删除的文本无法恢复。"
+   },
+   "confirm_delete_selected_ok": {
+      "message": "删除所选"
+   },
+   "copy": {
+      "message": "复制"
+   },
+   "day_today": {
+      "message": "今天"
+   },
+   "day_unknown": {
+      "message": "无日期"
+   },
+   "day_yesterday": {
+      "message": "昨天"
+   },
+   "delete": {
+      "message": "删除"
+   },
+   "empty_hint": {
+      "message": "在任意网页的文本框或富文本编辑器中输入内容，文本就会显示在这里。"
+   },
+   "empty_title": {
+      "message": "尚未保存任何内容"
+   },
+   "entry_untitled": {
+      "message": "无标题页面"
+   },
+   "ext_description": {
+      "message": "保存您在文本框中输入的内容，以便日后恢复。"
+   },
+   "kind_formatted": {
+      "message": "带格式"
+   },
+   "list_copy_html": {
+      "message": "复制为 HTML"
+   },
+   "list_copy_text": {
+      "message": "复制文本"
+   },
+   "list_count": {
+      "message": "已保存的文本：$1"
+   },
+   "list_count_filtered": {
+      "message": "显示 $1 / $2 条已保存的文本"
+   },
+   "list_delete_all": {
+      "message": "全部删除"
+   },
+   "list_delete_selected": {
+      "message": "删除所选（$1）"
+   },
+   "list_detail_meta": {
+      "message": "最后修改：$1，开始于：$2，字符数：$3，$4"
+   },
+   "list_detail_none": {
+      "message": "从列表中选择一条已保存的文本，在这里阅读。"
+   },
+   "list_formatted_label": {
+      "message": "带格式的已保存的文本"
+   },
+   "list_no_matches": {
+      "message": "没有匹配的已保存的文本"
+   },
+   "list_no_matches_hint": {
+      "message": "请尝试更少或更短的词语。搜索范围包括网址、页面标题和文本。"
+   },
+   "list_search_label": {
+      "message": "搜索已保存的文本"
+   },
+   "list_search_placeholder": {
+      "message": "搜索网址、标题和文本"
+   },
+   "list_select_all": {
+      "message": "全选显示的项"
+   },
+   "list_select_one": {
+      "message": "选择 $1"
+   },
+   "list_show_formatting": {
+      "message": "显示格式"
+   },
+   "list_text_label": {
+      "message": "已保存的文本"
+   },
+   "list_title": {
+      "message": "已保存的文本"
+   },
+   "load_failed": {
+      "message": "无法加载已保存的文本：$1"
+   },
+   "nav_label": {
+      "message": "页面"
+   },
+   "nav_list": {
+      "message": "已保存的文本"
+   },
+   "nav_settings": {
+      "message": "设置"
+   },
+   "options_autoClean": {
+      "message": "自动删除较早的已保存的文本"
+   },
+   "options_autoClean_desc": {
+      "message": "清理会在浏览器启动时运行，之后每小时运行一次。删除的文本无法恢复。"
+   },
+   "options_dedupe": {
+      "message": "移除同一文本的旧副本"
+   },
+   "options_dedupe_desc": {
+      "message": "如果两条已保存的文本内容相同，只保留最近修改的那一条，无论它来自哪个页面。离开文本框时以及每次清理时都会执行。"
+   },
+   "options_deleteAll": {
+      "message": "删除所有已保存的文本"
+   },
+   "options_deleteAll_button": {
+      "message": "删除所有已保存的文本"
+   },
+   "options_deleteAll_desc": {
+      "message": "一次性移除所有已保存的文本。您的设置和要跳过的页面列表会保留。"
+   },
+   "options_export": {
+      "message": "导出所有已保存的文本"
+   },
+   "options_export_button": {
+      "message": "导出 CSV"
+   },
+   "options_export_desc": {
+      "message": "下载一个 CSV 文件，包含每条已保存的文本的网址、标题、时间和内容。"
+   },
+   "options_group_cleanup": {
+      "message": "清理"
+   },
+   "options_group_display": {
+      "message": "显示"
+   },
+   "options_group_saving": {
+      "message": "保存"
+   },
+   "options_group_saving_intro": {
+      "message": "文本框和富文本编辑器会在每次更改后不久自动保存，无论更改方式如何：键入、粘贴、听写或自动更正。单行输入框（例如搜索框和登录表单）永远不会保存。在这里所做的更改会立即应用到已打开的页面。"
+   },
+   "options_group_storage": {
+      "message": "存储"
+   },
+   "options_invalid_keep": {
+      "message": "请输入大于或等于 1 的整数。此值未保存。"
+   },
+   "options_invalid_size": {
+      "message": "请输入大于或等于 0 的整数。此值未保存。"
+   },
+   "options_keepNewest": {
+      "message": "保留最新的"
+   },
+   "options_keepNewest_desc": {
+      "message": "清理时保留这么多条最近修改的已保存的文本，其余的删除。"
+   },
+   "options_language": {
+      "message": "显示语言"
+   },
+   "options_language_auto": {
+      "message": "自动（浏览器语言）：$1"
+   },
+   "options_language_desc": {
+      "message": "自动模式使用浏览器的语言；如果 TextCache 没有该语言，则使用英语。"
+   },
+   "options_lead": {
+      "message": "TextCache 会保留您在文本框中输入内容的副本，以便在页面崩溃或表单丢失后找回。在这里所做的每项更改都会立即保存。"
+   },
+   "options_maxItemKb": {
+      "message": "可保存的最大文本"
+   },
+   "options_maxItemKb_desc": {
+      "message": "超过此大小的文本不会保存：会保留最后一个未超限的版本，工具栏图标会在该标签页上显示徽章。在富文本编辑器中，格式（HTML）也计入大小。0 表示不限制。"
+   },
+   "options_popupWidth": {
+      "message": "弹出窗口宽度"
+   },
+   "options_popupWidth_desc": {
+      "message": "从工具栏图标打开的窗口有多宽。下次打开弹出窗口时生效。"
+   },
+   "options_popupWidth_narrow": {
+      "message": "窄"
+   },
+   "options_popupWidth_normal": {
+      "message": "标准"
+   },
+   "options_popupWidth_wide": {
+      "message": "宽"
+   },
+   "options_preview_none": {
+      "message": "按当前设置，下次清理不会删除任何内容。已保存的文本：$1。"
+   },
+   "options_preview_off": {
+      "message": "自动清理已关闭，因此已保存的文本只会在您手动删除时被删除。"
+   },
+   "options_preview_some": {
+      "message": "按当前设置，下次清理将删除 $1 / $2 条已保存的文本。"
+   },
+   "options_skip": {
+      "message": "要跳过的页面"
+   },
+   "options_skip_desc": {
+      "message": "每行一项。如果页面网址的任意位置包含某一项，则不会在该页面上保存任何内容，因此 slack.com 也涵盖 app.slack.com。嵌入的框架按其自身网址检查。"
+   },
+   "options_skip_save": {
+      "message": "保存列表"
+   },
+   "options_title": {
+      "message": "TextCache 设置"
+   },
+   "options_unit_kb": {
+      "message": "KB"
+   },
+   "options_unit_texts": {
+      "message": "条已保存的文本"
+   },
+   "options_usage_count": {
+      "message": "已保存的文本"
+   },
+   "options_usage_space": {
+      "message": "已用空间"
+   },
+   "options_usage_space_of": {
+      "message": "$1 / $2"
+   },
+   "popup_back": {
+      "message": "所有已保存的文本"
+   },
+   "popup_copy_one": {
+      "message": "复制在 $1 上保存的文本"
+   },
+   "popup_detail_meta": {
+      "message": "$1，最后修改：$2"
+   },
+   "popup_more": {
+      "message": "这里显示最新的 $1 条，共 $2 条。完整列表包含全部。"
+   },
+   "popup_none_here": {
+      "message": "此网站上没有保存任何内容"
+   },
+   "popup_none_here_hint": {
+      "message": "关闭“此网站”即可查看在所有网站上保存的文本。"
+   },
+   "popup_open_list": {
+      "message": "打开完整列表"
+   },
+   "popup_this_site": {
+      "message": "此网站"
+   },
+   "status_copied": {
+      "message": "已复制"
+   },
+   "status_deleted": {
+      "message": "已删除：$1"
+   },
+   "status_deleted_all": {
+      "message": "已删除所有已保存的文本"
+   },
+   "status_failed": {
+      "message": "操作失败：$1"
+   },
+   "status_not_saved": {
+      "message": "未保存：$1"
+   },
+   "status_saved": {
+      "message": "已保存"
+   },
+   "time_just_now": {
+      "message": "刚刚"
+   },
+   "time_unknown": {
+      "message": "未知"
+   }
+}

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TextCache playground</title>
+<style>
+    :root { color-scheme: light dark; }
+    body { font: 15px/1.5 system-ui, sans-serif; max-width: 860px; margin: 24px auto; padding: 0 16px; }
+    h1 { font-size: 22px; margin-bottom: 4px; }
+    section { border: 1px solid #8884; border-radius: 10px; padding: 12px 16px; margin: 14px 0; }
+    section h2 { font-size: 16px; margin: 0 0 4px; }
+    .expect { color: #777; margin: 0 0 8px; }
+    textarea, input[type=text], [contenteditable] { width: 100%; box-sizing: border-box; font: inherit; padding: 6px 8px; }
+    [contenteditable] { border: 1px solid #8888; border-radius: 4px; min-height: 2.5em; }
+    iframe { width: 100%; height: 90px; border: 1px solid #8888; border-radius: 4px; }
+    button { font: inherit; padding: 6px 12px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 8px; }
+    th, td { text-align: left; border-bottom: 1px solid #8884; padding: 4px 8px; vertical-align: top; }
+    code { font-size: 13px; }
+    #runState { font-weight: 600; }
+</style>
+</head>
+<body>
+<h1>TextCache playground</h1>
+<p>Every scenario writes a text that starts with a marker <code>TC-&lt;run&gt;-&lt;scenario&gt;</code>. Press <b>Run all</b>, wait for
+<code>#runState</code> to say <code>done</code>, then search the extension's full list for <code>TC-&lt;run&gt;</code> and compare with the table at
+the bottom. Each field can also be typed into by hand. Run code: <code id="run"></code></p>
+<p><button id="runAll" type="button">Run all</button> <span id="runState">idle</span></p>
+
+<section id="s-textarea"><h2>1. Text area</h2><p class="expect">Saved, kind text.</p>
+    <textarea id="f-textarea" rows="2"></textarea></section>
+
+<section id="s-input"><h2>2. Single-line input</h2><p class="expect">Never saved.</p>
+    <input id="f-input" type="text"></section>
+
+<section id="s-editor"><h2>3. Rich-text editor with nested markup</h2><p class="expect">One saved text, kind html, for the whole editor.</p>
+    <div id="f-editor" contenteditable="true"></div></section>
+
+<section id="s-shadow"><h2>4. Text area inside an open shadow root</h2><p class="expect">Saved.</p>
+    <div id="f-shadow-host"></div></section>
+
+<section id="s-frame"><h2>5. Text area inside a srcdoc frame</h2><p class="expect">Saved; its address is about:srcdoc.</p>
+    <iframe id="f-frame" srcdoc="<textarea id='inner' style='width:95%' rows='2'></textarea>"></iframe></section>
+
+<section id="s-late"><h2>6. Text area added after the page loaded</h2><p class="expect">Saved.</p>
+    <div id="f-late-slot"></div></section>
+
+<section id="s-remount"><h2>7. Editor that the page rebuilds while you type</h2>
+    <p class="expect">The page replaces the editor element with a copy after every change, as some chat apps do. One saved text holding the final
+    content; not one per rebuild.</p>
+    <div id="f-remount-slot"><div class="remount" contenteditable="true"></div></div></section>
+
+<section id="s-duplicate"><h2>8. The same text in two fields</h2>
+    <p class="expect">With "remove older copies of the same text" on: one saved text. With it off: two.</p>
+    <textarea id="f-dup-a" rows="2"></textarea><textarea id="f-dup-b" rows="2"></textarea></section>
+
+<section id="s-big"><h2>9. A text over the size limit</h2>
+    <p class="expect">With the default limit of 1024 KB: the short first version stays saved, the 2 MB version is not, the toolbar icon shows MAX
+    on this tab.</p>
+    <textarea id="f-big" rows="2"></textarea></section>
+
+<section id="s-blank"><h2>10. Only spaces and line breaks</h2><p class="expect">Never saved.</p>
+    <textarea id="f-blank" rows="2"></textarea></section>
+
+<section id="s-send"><h2>11. Editor cleared and rebuilt after sending</h2>
+    <p class="expect">The page sends the message and replaces the editor with an empty one, as chat apps do; then a different message is typed.
+    Two saved texts: the sent message is not overwritten by the next one.</p>
+    <div id="f-send-slot"><div class="send" contenteditable="true"></div></div></section>
+
+<h2>Expected result of "Run all"</h2>
+<table id="expected">
+    <thead><tr><th>Marker</th><th>Expected in the list</th></tr></thead>
+    <tbody></tbody>
+</table>
+
+<script>
+(() => {
+    const run = Date.now().toString(36).slice(-5).toUpperCase();
+    const marker = name => `TC-${run}-${name}`;
+    const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+    // longer than the extension's 400 ms save delay
+    const SETTLE = 700;
+    document.getElementById('run').textContent = run;
+
+    const shadow = document.getElementById('f-shadow-host').attachShadow({ mode: 'open' });
+    const shadowArea = document.createElement('textarea');
+    shadowArea.id = 'f-shadow';
+    shadowArea.rows = 2;
+    shadowArea.style.width = '100%';
+    shadow.append(shadowArea);
+
+    // what a person's typing produces as far as the page can tell: the new content, then an input event that bubbles out of shadow roots
+    function setText(field, text) {
+        field.focus();
+        if (field.isContentEditable) field.textContent = text;
+        else field.value = text;
+        field.dispatchEvent(new InputEvent('input', { bubbles: true, composed: true, inputType: 'insertText', data: text }));
+    }
+    function setHtml(field, parts) {
+        field.focus();
+        field.replaceChildren(...parts);
+        field.dispatchEvent(new InputEvent('input', { bubbles: true, composed: true, inputType: 'insertText' }));
+    }
+
+    // scenario 7: the page swaps the editor for a copy of itself after each change
+    document.getElementById('f-remount-slot').addEventListener('input', event => {
+        const old = event.target.closest('.remount');
+        if (!old) return;
+        setTimeout(() => {
+            const copy = old.cloneNode(true);
+            old.replaceWith(copy);
+        }, 50);
+    });
+
+    const expected = [
+        ['textarea', 'yes, once, kind text'],
+        ['input', 'no'],
+        ['editor', 'yes, once, kind html, text "… bold and plain"'],
+        ['shadow', 'yes, once'],
+        ['frame', 'yes, once'],
+        ['late', 'yes, once'],
+        ['remount', 'yes, once, ending in "step 3"; no entries ending in "step 1" or "step 2"'],
+        ['duplicate', 'once with duplicate removal on, twice with it off'],
+        ['big', 'yes, once, the short version only (ends in "short")'],
+        ['blank', 'no (the field holds no marker; nothing new may appear for it)'],
+        ['send', 'yes, twice: one ending in "first message", one ending in "a different second one"'],
+    ];
+    const tbody = document.querySelector('#expected tbody');
+    for (const [name, text] of expected) {
+        const row = tbody.insertRow();
+        row.insertCell().textContent = name === 'blank' ? '(none)' : marker(name);
+        row.insertCell().textContent = text;
+    }
+
+    async function runAll() {
+        const state = document.getElementById('runState');
+        state.textContent = 'running';
+
+        setText(document.getElementById('f-textarea'), `${marker('textarea')} plain text area`);
+        setText(document.getElementById('f-input'), `${marker('input')} single-line input`);
+
+        const bold = document.createElement('b');
+        bold.textContent = 'bold';
+        setHtml(document.getElementById('f-editor'), [`${marker('editor')} `, bold, ' and plain']);
+        // a change that originates inside the nested element
+        bold.dispatchEvent(new InputEvent('input', { bubbles: true, composed: true, inputType: 'insertText' }));
+
+        setText(shadowArea, `${marker('shadow')} inside a shadow root`);
+
+        const inner = document.getElementById('f-frame').contentDocument.getElementById('inner');
+        inner.focus();
+        inner.value = `${marker('frame')} inside a srcdoc frame`;
+        inner.dispatchEvent(new InputEvent('input', { bubbles: true, composed: true, inputType: 'insertText' }));
+
+        const late = document.createElement('textarea');
+        late.id = 'f-late';
+        late.rows = 2;
+        document.getElementById('f-late-slot').replaceChildren(late);
+        setText(late, `${marker('late')} added after load`);
+        await wait(SETTLE);
+
+        for (const step of [1, 2, 3]) {
+            setText(document.querySelector('#f-remount-slot .remount'), `${marker('remount')} rebuilt editor, step ${step}`);
+            await wait(SETTLE);
+        }
+
+        setText(document.getElementById('f-dup-a'), `${marker('duplicate')} the same text twice`);
+        await wait(SETTLE);
+        setText(document.getElementById('f-dup-b'), `${marker('duplicate')} the same text twice`);
+        await wait(SETTLE);
+
+        const big = document.getElementById('f-big');
+        setText(big, `${marker('big')} short`);
+        await wait(SETTLE);
+        setText(big, `${marker('big')} ` + 'x'.repeat(2 * 1024 * 1024));
+        await wait(SETTLE);
+
+        setText(document.getElementById('f-blank'), '   \n  \n ');
+        await wait(SETTLE);
+
+        const slot = document.getElementById('f-send-slot');
+        setText(slot.querySelector('.send'), `${marker('send')} first message`);
+        await wait(SETTLE);
+        const emptied = document.createElement('div');
+        emptied.className = 'send';
+        emptied.contentEditable = 'true';
+        slot.querySelector('.send').replaceWith(emptied);
+        setText(emptied, `${marker('send')} and now a different second one`);
+        await wait(SETTLE);
+
+        // leaving the last field lets the extension finish whatever it does when a field is left
+        emptied.blur();
+        await wait(SETTLE);
+        state.textContent = 'done';
+    }
+
+    document.getElementById('runAll').addEventListener('click', runAll);
+    if (new URLSearchParams(location.search).has('autorun')) window.addEventListener('load', runAll);
+})();
+</script>
+</body>
+</html>

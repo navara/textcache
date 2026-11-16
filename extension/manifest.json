@@ -1,0 +1,40 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "icons/icon-16.png",
+         "32": "icons/icon-32.png"
+      },
+      "default_popup": "popup/popup.html",
+      "default_title": "TextCache: your saved texts"
+   },
+   "background": {
+      "service_worker": "background.js",
+      "type": "module"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content.js" ],
+      "match_about_blank": true,
+      "match_origin_as_fallback": true,
+      "matches": [ "<all_urls>" ],
+      "run_at": "document_idle"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_ext_description__",
+   "homepage_url": "https://github.com/navara/textcache",
+   "icons": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAx3r0VPtPUoGM63FaiwSs5hYgEOvniL/Ub91/t0vD8bjpkbXcKjo3aoYyALncp2rKI8kfONIRPafh0SxKJZUmgIQoT4NiQr5UG6f/ryidQOdTRInaoT2ejafFG/LYRw0x4Ii96tFp+JKuP0nsqXrvTolEItMpDmdOduJuGi7hDX7Y6zqW1leYe58DxoY0+X+fkvbL793Icp8V1zNGJfTFqqadixNL5i6+paqMt8utwY317f1SEXzJSD8cxXvMibyRs0pN+B1bB2IO9OamM6YP5wonwXRSc6Smj6LEmS5D+zS3dZ0mDVlQXgCSnXAUE8hXT55Kx3uBEp/B2GF+CGTuEQIDAQAB",
+   "manifest_version": 3,
+   "name": "TextCache",
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "options/options.html"
+   },
+   "permissions": [ "storage", "unlimitedStorage", "alarms", "clipboardWrite", "activeTab" ],
+   "version": "1.0"
+}

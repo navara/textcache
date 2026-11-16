@@ -1,0 +1,296 @@
+{
+   "app_name": {
+      "message": "TextCache"
+   },
+   "badge_save_failed": {
+      "message": "تعذّر على TextCache الحفظ: $1"
+   },
+   "badge_too_large": {
+      "message": "لم يحفظ TextCache نصًا في علامة التبويب هذه: حجمه ($1) يتجاوز الحد ($2)"
+   },
+   "confirm_cancel": {
+      "message": "إلغاء"
+   },
+   "confirm_delete_all": {
+      "message": "هل تريد حذف كل النصوص المحفوظة (العدد الإجمالي: $1)؟ لا يمكن استعادة النصوص المحذوفة. تبقى إعداداتك كما هي."
+   },
+   "confirm_delete_all_ok": {
+      "message": "حذف الكل"
+   },
+   "confirm_delete_selected": {
+      "message": "هل تريد حذف النصوص المحفوظة المحددة (العدد: $1)؟ لا يمكن استعادة النصوص المحذوفة."
+   },
+   "confirm_delete_selected_ok": {
+      "message": "حذف المحدد"
+   },
+   "copy": {
+      "message": "نسخ"
+   },
+   "day_today": {
+      "message": "اليوم"
+   },
+   "day_unknown": {
+      "message": "بلا تاريخ"
+   },
+   "day_yesterday": {
+      "message": "أمس"
+   },
+   "delete": {
+      "message": "حذف"
+   },
+   "empty_hint": {
+      "message": "اكتب في مربع نص أو محرر نصوص منسقة في أي صفحة ويب، وسيظهر النص هنا."
+   },
+   "empty_title": {
+      "message": "لم يُحفظ شيء بعد"
+   },
+   "entry_untitled": {
+      "message": "صفحة بلا عنوان"
+   },
+   "ext_description": {
+      "message": "يحفظ ما تكتبه في حقول النص لتتمكن من استعادته."
+   },
+   "kind_formatted": {
+      "message": "منسّق"
+   },
+   "list_copy_html": {
+      "message": "نسخ بتنسيق HTML"
+   },
+   "list_copy_text": {
+      "message": "نسخ النص"
+   },
+   "list_count": {
+      "message": "النصوص المحفوظة: $1"
+   },
+   "list_count_filtered": {
+      "message": "المعروض: $1 من $2"
+   },
+   "list_delete_all": {
+      "message": "حذف الكل"
+   },
+   "list_delete_selected": {
+      "message": "حذف المحدد ($1)"
+   },
+   "list_detail_meta": {
+      "message": "آخر تغيير: $1، البداية: $2، عدد الأحرف: $3، الحجم: $4"
+   },
+   "list_detail_none": {
+      "message": "اختر نصًا محفوظًا من القائمة لقراءته هنا."
+   },
+   "list_formatted_label": {
+      "message": "النص المحفوظ بتنسيقه"
+   },
+   "list_no_matches": {
+      "message": "لا يطابق البحث أي نص محفوظ"
+   },
+   "list_no_matches_hint": {
+      "message": "جرّب كلمات أقل أو أقصر. يشمل البحث رابط الصفحة وعنوانها والنص."
+   },
+   "list_search_label": {
+      "message": "البحث في النصوص المحفوظة"
+   },
+   "list_search_placeholder": {
+      "message": "ابحث في الرابط والعنوان والنص"
+   },
+   "list_select_all": {
+      "message": "تحديد كل المعروض"
+   },
+   "list_select_one": {
+      "message": "تحديد $1"
+   },
+   "list_show_formatting": {
+      "message": "إظهار التنسيق"
+   },
+   "list_text_label": {
+      "message": "النص المحفوظ"
+   },
+   "list_title": {
+      "message": "النصوص المحفوظة"
+   },
+   "load_failed": {
+      "message": "تعذّر تحميل النصوص المحفوظة: $1"
+   },
+   "nav_label": {
+      "message": "الصفحات"
+   },
+   "nav_list": {
+      "message": "النصوص المحفوظة"
+   },
+   "nav_settings": {
+      "message": "الإعدادات"
+   },
+   "options_autoClean": {
+      "message": "حذف النصوص المحفوظة الأقدم تلقائيًا"
+   },
+   "options_autoClean_desc": {
+      "message": "يجري التنظيف عند بدء تشغيل المتصفح ومرة كل ساعة. لا يمكن استعادة النصوص المحذوفة."
+   },
+   "options_dedupe": {
+      "message": "إزالة النسخ الأقدم من النص نفسه"
+   },
+   "options_dedupe_desc": {
+      "message": "عندما يحتوي نصان محفوظان على النص نفسه، يُبقى الأحدث تغييرًا فقط، أيًا كانت الصفحة التي جاء منها. يحدث ذلك عند مغادرة حقل نص ومع كل تنظيف."
+   },
+   "options_deleteAll": {
+      "message": "حذف كل النصوص المحفوظة"
+   },
+   "options_deleteAll_button": {
+      "message": "حذف كل النصوص المحفوظة"
+   },
+   "options_deleteAll_desc": {
+      "message": "يزيل كل النصوص المحفوظة دفعة واحدة. تبقى إعداداتك وقائمة الصفحات المستثناة."
+   },
+   "options_export": {
+      "message": "تصدير كل النصوص المحفوظة"
+   },
+   "options_export_button": {
+      "message": "تصدير CSV"
+   },
+   "options_export_desc": {
+      "message": "ينزّل ملف CSV يتضمن الرابط والعنوان والأوقات والمحتوى لكل نص محفوظ."
+   },
+   "options_group_cleanup": {
+      "message": "التنظيف"
+   },
+   "options_group_display": {
+      "message": "العرض"
+   },
+   "options_group_saving": {
+      "message": "الحفظ"
+   },
+   "options_group_saving_intro": {
+      "message": "تُحفظ مربعات النص ومحررات النصوص المنسقة بعد كل تغيير بقليل، أيًا كانت طريقة التغيير: الكتابة أو اللصق أو الإملاء الصوتي أو التصحيح التلقائي. لا تُحفظ أبدًا الحقول ذات السطر الواحد، مثل مربعات البحث ونماذج تسجيل الدخول. تصل التغييرات هنا إلى الصفحات المفتوحة فورًا."
+   },
+   "options_group_storage": {
+      "message": "التخزين"
+   },
+   "options_invalid_keep": {
+      "message": "أدخل عددًا صحيحًا يساوي 1 أو أكثر. لم تُحفظ هذه القيمة."
+   },
+   "options_invalid_size": {
+      "message": "أدخل عددًا صحيحًا يساوي 0 أو أكثر. لم تُحفظ هذه القيمة."
+   },
+   "options_keepNewest": {
+      "message": "الإبقاء على الأحدث"
+   },
+   "options_keepNewest_desc": {
+      "message": "يُبقي التنظيف هذا العدد من النصوص المحفوظة الأحدث تغييرًا ويحذف الباقي."
+   },
+   "options_language": {
+      "message": "لغة العرض"
+   },
+   "options_language_auto": {
+      "message": "تلقائي (لغة المتصفح): $1"
+   },
+   "options_language_desc": {
+      "message": "يستخدم الخيار التلقائي لغة متصفحك، أو الإنجليزية إذا لم تكن متوفرة في TextCache."
+   },
+   "options_lead": {
+      "message": "يحتفظ TextCache بنسخة مما تكتبه في مربعات النص، لتتمكن من استعادته إذا تعطلت صفحة أو ضاع نموذج. يُحفظ كل تغيير هنا فور إجرائه."
+   },
+   "options_maxItemKb": {
+      "message": "أكبر حجم لنص يُحفظ"
+   },
+   "options_maxItemKb_desc": {
+      "message": "لا يُحفظ النص الأكبر من هذا الحجم: يُبقى آخر إصدار كان ضمن الحد، وتعرض أيقونة شريط الأدوات شارة على علامة التبويب تلك. في محررات النصوص المنسقة يُحتسب التنسيق (HTML) ضمن الحجم. القيمة 0 تعني بلا حد."
+   },
+   "options_popupWidth": {
+      "message": "عرض النافذة المنبثقة"
+   },
+   "options_popupWidth_desc": {
+      "message": "مقدار عرض النافذة التي تُفتح من أيقونة شريط الأدوات. يُطبَّق عند فتح النافذة المنبثقة في المرة التالية."
+   },
+   "options_popupWidth_narrow": {
+      "message": "ضيقة"
+   },
+   "options_popupWidth_normal": {
+      "message": "عادية"
+   },
+   "options_popupWidth_wide": {
+      "message": "واسعة"
+   },
+   "options_preview_none": {
+      "message": "بهذه الإعدادات لن يحذف التنظيف التالي شيئًا. النصوص المحفوظة: $1."
+   },
+   "options_preview_off": {
+      "message": "التنظيف التلقائي متوقف، لذا لا تُحذف النصوص المحفوظة إلا عندما تحذفها بنفسك."
+   },
+   "options_preview_some": {
+      "message": "النصوص المحفوظة التي سيحذفها التنظيف التالي بهذه الإعدادات: $1 من $2."
+   },
+   "options_skip": {
+      "message": "الصفحات المستثناة"
+   },
+   "options_skip_desc": {
+      "message": "إدخال واحد في كل سطر. لا يُحفظ شيء في صفحة يحتوي رابطها على أحد الإدخالات في أي موضع، لذا يشمل slack.com أيضًا app.slack.com. تُفحص الإطارات المضمّنة حسب رابطها الخاص."
+   },
+   "options_skip_save": {
+      "message": "حفظ القائمة"
+   },
+   "options_title": {
+      "message": "إعدادات TextCache"
+   },
+   "options_unit_kb": {
+      "message": "KB"
+   },
+   "options_unit_texts": {
+      "message": "من النصوص المحفوظة"
+   },
+   "options_usage_count": {
+      "message": "النصوص المحفوظة"
+   },
+   "options_usage_space": {
+      "message": "المساحة المستخدمة"
+   },
+   "options_usage_space_of": {
+      "message": "$1 من $2"
+   },
+   "popup_back": {
+      "message": "كل النصوص المحفوظة"
+   },
+   "popup_copy_one": {
+      "message": "نسخ النص المحفوظ: $1"
+   },
+   "popup_detail_meta": {
+      "message": "$1، آخر تغيير: $2"
+   },
+   "popup_more": {
+      "message": "المعروض هنا هو الأحدث: $1 من $2. تجدها كلها في القائمة الكاملة."
+   },
+   "popup_none_here": {
+      "message": "لا شيء محفوظ على هذا الموقع"
+   },
+   "popup_none_here_hint": {
+      "message": "أوقف «هذا الموقع» لرؤية النصوص المحفوظة في كل مكان."
+   },
+   "popup_open_list": {
+      "message": "فتح القائمة الكاملة"
+   },
+   "popup_this_site": {
+      "message": "هذا الموقع"
+   },
+   "status_copied": {
+      "message": "تم النسخ"
+   },
+   "status_deleted": {
+      "message": "تم الحذف: $1"
+   },
+   "status_deleted_all": {
+      "message": "تم حذف كل النصوص المحفوظة"
+   },
+   "status_failed": {
+      "message": "لم ينجح ذلك: $1"
+   },
+   "status_not_saved": {
+      "message": "لم يُحفظ: $1"
+   },
+   "status_saved": {
+      "message": "تم الحفظ"
+   },
+   "time_just_now": {
+      "message": "الآن"
+   },
+   "time_unknown": {
+      "message": "غير معروف"
+   }
+}

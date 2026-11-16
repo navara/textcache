@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="app_name"></title>
+    <link rel="stylesheet" href="/ui/base.css">
+    <link rel="stylesheet" href="./popup.css">
+    <script type="module" src="./popup.js"></script>
+</head>
+<body>
+<header class="pop-head">
+    <span class="brand"><img src="/icons/icon-48.png" alt="" width="20" height="20"><span data-i18n="app_name"></span></span>
+    <label class="switch-label site-filter" id="siteFilter">
+        <span class="site-text"><span data-i18n="popup_this_site"></span><span class="site-host" id="siteHost"></span></span>
+        <input class="switch" type="checkbox" id="thisSite">
+    </label>
+</header>
+
+<main class="pop-main">
+    <section id="listView">
+        <ul class="entries" id="entries"></ul>
+        <p class="more muted" id="more" hidden></p>
+        <p class="empty" id="loadError" role="alert" hidden></p>
+        <p class="empty" id="empty" hidden><strong data-i18n="empty_title"></strong><span data-i18n="empty_hint"></span></p>
+        <p class="empty" id="noSiteMatches" hidden><strong data-i18n="popup_none_here"></strong><span data-i18n="popup_none_here_hint"></span></p>
+    </section>
+
+    <section class="detail" id="detailView" hidden aria-labelledby="detailTitle">
+        <button type="button" class="back" id="back" data-i18n="popup_back"></button>
+        <h2 class="detail-title" id="detailTitle" dir="auto"></h2>
+        <p class="detail-meta muted" id="detailMeta"></p>
+        <pre class="reading" id="detailText" tabindex="0" dir="auto" data-i18n-attr="aria-label:list_text_label"></pre>
+        <div class="detail-actions">
+            <button type="button" class="button" id="copy" data-i18n="copy"></button>
+            <button type="button" class="button quiet danger" id="delete" data-i18n="delete"></button>
+        </div>
+    </section>
+</main>
+
+<footer class="pop-foot">
+    <button type="button" class="button quiet small" id="openList" data-i18n="popup_open_list"></button>
+    <button type="button" class="button quiet small" id="openSettings" data-i18n="nav_settings"></button>
+</footer>
+
+<p class="status" id="status" role="status" aria-live="polite"></p>
+</body>
+</html>

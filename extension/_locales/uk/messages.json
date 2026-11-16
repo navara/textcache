@@ -1,0 +1,296 @@
+{
+   "app_name": {
+      "message": "TextCache"
+   },
+   "badge_save_failed": {
+      "message": "TextCache не вдалося зберегти текст: $1"
+   },
+   "badge_too_large": {
+      "message": "TextCache не зберіг текст у цій вкладці: його розмір ($1) перевищує ліміт ($2)"
+   },
+   "confirm_cancel": {
+      "message": "Скасувати"
+   },
+   "confirm_delete_all": {
+      "message": "Видалити всі збережені тексти (усього: $1)? Видалені тексти неможливо відновити. Налаштування залишаться без змін."
+   },
+   "confirm_delete_all_ok": {
+      "message": "Видалити все"
+   },
+   "confirm_delete_selected": {
+      "message": "Видалити вибрані збережені тексти ($1)? Видалені тексти неможливо відновити."
+   },
+   "confirm_delete_selected_ok": {
+      "message": "Видалити вибрані"
+   },
+   "copy": {
+      "message": "Копіювати"
+   },
+   "day_today": {
+      "message": "Сьогодні"
+   },
+   "day_unknown": {
+      "message": "Без дати"
+   },
+   "day_yesterday": {
+      "message": "Учора"
+   },
+   "delete": {
+      "message": "Видалити"
+   },
+   "empty_hint": {
+      "message": "Введіть текст у текстове поле або редактор форматованого тексту на будь-якій вебсторінці, і він з'явиться тут."
+   },
+   "empty_title": {
+      "message": "Поки що нічого не збережено"
+   },
+   "entry_untitled": {
+      "message": "Сторінка без назви"
+   },
+   "ext_description": {
+      "message": "Зберігає те, що ви вводите в текстові поля, щоб це можна було відновити."
+   },
+   "kind_formatted": {
+      "message": "з форматуванням"
+   },
+   "list_copy_html": {
+      "message": "Копіювати як HTML"
+   },
+   "list_copy_text": {
+      "message": "Копіювати текст"
+   },
+   "list_count": {
+      "message": "Збережені тексти: $1"
+   },
+   "list_count_filtered": {
+      "message": "Показано: $1 із $2"
+   },
+   "list_delete_all": {
+      "message": "Видалити все"
+   },
+   "list_delete_selected": {
+      "message": "Видалити вибрані ($1)"
+   },
+   "list_detail_meta": {
+      "message": "Змінено: $1, розпочато: $2, символів: $3, розмір: $4"
+   },
+   "list_detail_none": {
+      "message": "Виберіть збережений текст у списку, щоб прочитати його тут."
+   },
+   "list_formatted_label": {
+      "message": "Збережений текст із форматуванням"
+   },
+   "list_no_matches": {
+      "message": "Відповідних збережених текстів немає"
+   },
+   "list_no_matches_hint": {
+      "message": "Спробуйте менше слів або коротші слова. Пошук ведеться за адресою, заголовком сторінки та текстом."
+   },
+   "list_search_label": {
+      "message": "Пошук у збережених текстах"
+   },
+   "list_search_placeholder": {
+      "message": "Пошук за адресою, заголовком і текстом"
+   },
+   "list_select_all": {
+      "message": "Вибрати всі показані"
+   },
+   "list_select_one": {
+      "message": "Вибрати: $1"
+   },
+   "list_show_formatting": {
+      "message": "Показати форматування"
+   },
+   "list_text_label": {
+      "message": "Збережений текст"
+   },
+   "list_title": {
+      "message": "Збережені тексти"
+   },
+   "load_failed": {
+      "message": "Не вдалося завантажити збережені тексти: $1"
+   },
+   "nav_label": {
+      "message": "Сторінки"
+   },
+   "nav_list": {
+      "message": "Збережені тексти"
+   },
+   "nav_settings": {
+      "message": "Налаштування"
+   },
+   "options_autoClean": {
+      "message": "Автоматично видаляти старіші збережені тексти"
+   },
+   "options_autoClean_desc": {
+      "message": "Очищення запускається під час запуску браузера та раз на годину. Видалені тексти неможливо відновити."
+   },
+   "options_dedupe": {
+      "message": "Видаляти старіші копії того самого тексту"
+   },
+   "options_dedupe_desc": {
+      "message": "Якщо два збережені тексти збігаються, залишається лише той, що змінений останнім, з якої б сторінки він не був. Це відбувається, коли ви залишаєте текстове поле, і під час кожного очищення."
+   },
+   "options_deleteAll": {
+      "message": "Видалити всі збережені тексти"
+   },
+   "options_deleteAll_button": {
+      "message": "Видалити всі збережені тексти"
+   },
+   "options_deleteAll_desc": {
+      "message": "Видаляє одразу всі збережені тексти. Налаштування та список виключених сторінок залишаються."
+   },
+   "options_export": {
+      "message": "Експорт усіх збережених текстів"
+   },
+   "options_export_button": {
+      "message": "Експорт у CSV"
+   },
+   "options_export_desc": {
+      "message": "Завантажує файл CSV з адресою, заголовком, часом і вмістом кожного збереженого тексту."
+   },
+   "options_group_cleanup": {
+      "message": "Очищення"
+   },
+   "options_group_display": {
+      "message": "Вигляд"
+   },
+   "options_group_saving": {
+      "message": "Збереження"
+   },
+   "options_group_saving_intro": {
+      "message": "Текстові поля та редактори форматованого тексту зберігаються невдовзі після кожної зміни, хоч би як її було зроблено: введенням, вставленням, диктуванням чи автовиправленням. Однорядкові поля, наприклад рядки пошуку та форми входу, не зберігаються ніколи. Зміни тут одразу застосовуються до відкритих сторінок."
+   },
+   "options_group_storage": {
+      "message": "Сховище"
+   },
+   "options_invalid_keep": {
+      "message": "Введіть ціле число не менше 1. Це значення не збережено."
+   },
+   "options_invalid_size": {
+      "message": "Введіть ціле число не менше 0. Це значення не збережено."
+   },
+   "options_keepNewest": {
+      "message": "Скільки найновіших текстів зберігати"
+   },
+   "options_keepNewest_desc": {
+      "message": "Очищення залишає вказану кількість збережених текстів, змінених останніми, і видаляє решту."
+   },
+   "options_language": {
+      "message": "Мова інтерфейсу"
+   },
+   "options_language_auto": {
+      "message": "Автоматично (мова браузера): $1"
+   },
+   "options_language_desc": {
+      "message": "Автоматичний вибір використовує мову браузера, а якщо TextCache її не має, то англійську."
+   },
+   "options_lead": {
+      "message": "TextCache зберігає копію того, що ви вводите в текстові поля, щоб її можна було повернути, якщо сторінка дала збій або форма зникла. Кожна зміна тут зберігається одразу."
+   },
+   "options_maxItemKb": {
+      "message": "Найбільший розмір тексту"
+   },
+   "options_maxItemKb_desc": {
+      "message": "Текст більшого розміру не зберігається: залишається остання версія, яка вмістилася, а значок на панелі інструментів показує позначку на цій вкладці. У редакторах форматованого тексту до розміру входить і форматування (HTML). 0 означає без обмежень."
+   },
+   "options_popupWidth": {
+      "message": "Ширина спливного вікна"
+   },
+   "options_popupWidth_desc": {
+      "message": "Наскільки широке вікно, що відкривається зі значка на панелі інструментів. Застосовується під час наступного відкриття вікна."
+   },
+   "options_popupWidth_narrow": {
+      "message": "Вузьке"
+   },
+   "options_popupWidth_normal": {
+      "message": "Звичайне"
+   },
+   "options_popupWidth_wide": {
+      "message": "Широке"
+   },
+   "options_preview_none": {
+      "message": "З цими налаштуваннями наступне очищення нічого не видалить. Збережені тексти: $1."
+   },
+   "options_preview_off": {
+      "message": "Автоматичне очищення вимкнено, тому збережені тексти видаляються, лише коли ви видаляєте їх самі."
+   },
+   "options_preview_some": {
+      "message": "Збережені тексти, які наступне очищення видалить із цими налаштуваннями: $1 із $2."
+   },
+   "options_skip": {
+      "message": "Виключені сторінки"
+   },
+   "options_skip_desc": {
+      "message": "Один запис на рядок. На сторінці, адреса якої будь-де містить запис, нічого не зберігається, тому slack.com охоплює й app.slack.com. Вбудовані фрейми перевіряються за їхньою власною адресою."
+   },
+   "options_skip_save": {
+      "message": "Зберегти список"
+   },
+   "options_title": {
+      "message": "Налаштування TextCache"
+   },
+   "options_unit_kb": {
+      "message": "KB"
+   },
+   "options_unit_texts": {
+      "message": "шт."
+   },
+   "options_usage_count": {
+      "message": "Збережені тексти"
+   },
+   "options_usage_space": {
+      "message": "Зайнято місця"
+   },
+   "options_usage_space_of": {
+      "message": "$1 із $2"
+   },
+   "popup_back": {
+      "message": "Усі збережені тексти"
+   },
+   "popup_copy_one": {
+      "message": "Копіювати збережений текст: $1"
+   },
+   "popup_detail_meta": {
+      "message": "$1, змінено: $2"
+   },
+   "popup_more": {
+      "message": "Тут показано найновіші: $1 із $2. Повний список містить усі."
+   },
+   "popup_none_here": {
+      "message": "На цьому сайті нічого не збережено"
+   },
+   "popup_none_here_hint": {
+      "message": "Вимкніть «Цей сайт», щоб побачити тексти, збережені всюди."
+   },
+   "popup_open_list": {
+      "message": "Відкрити повний список"
+   },
+   "popup_this_site": {
+      "message": "Цей сайт"
+   },
+   "status_copied": {
+      "message": "Скопійовано"
+   },
+   "status_deleted": {
+      "message": "Видалено: $1"
+   },
+   "status_deleted_all": {
+      "message": "Усі збережені тексти видалено"
+   },
+   "status_failed": {
+      "message": "Не вдалося: $1"
+   },
+   "status_not_saved": {
+      "message": "Не збережено: $1"
+   },
+   "status_saved": {
+      "message": "Збережено"
+   },
+   "time_just_now": {
+      "message": "щойно"
+   },
+   "time_unknown": {
+      "message": "невідомо"
+   }
+}

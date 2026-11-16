@@ -1,0 +1,296 @@
+{
+   "app_name": {
+      "message": "TextCache"
+   },
+   "badge_save_failed": {
+      "message": "O TextCache não conseguiu salvar: $1"
+   },
+   "badge_too_large": {
+      "message": "O TextCache não salvou um texto nesta guia: o tamanho dele ($1) passa do limite ($2)"
+   },
+   "confirm_cancel": {
+      "message": "Cancelar"
+   },
+   "confirm_delete_all": {
+      "message": "Excluir todos os textos salvos ($1 no total)? Textos excluídos não podem ser recuperados. Suas configurações continuam como estão."
+   },
+   "confirm_delete_all_ok": {
+      "message": "Excluir tudo"
+   },
+   "confirm_delete_selected": {
+      "message": "Excluir os textos salvos selecionados ($1)? Textos excluídos não podem ser recuperados."
+   },
+   "confirm_delete_selected_ok": {
+      "message": "Excluir selecionados"
+   },
+   "copy": {
+      "message": "Copiar"
+   },
+   "day_today": {
+      "message": "Hoje"
+   },
+   "day_unknown": {
+      "message": "Sem data"
+   },
+   "day_yesterday": {
+      "message": "Ontem"
+   },
+   "delete": {
+      "message": "Excluir"
+   },
+   "empty_hint": {
+      "message": "Digite em uma área de texto ou em um editor de texto formatado em qualquer página da web, e o texto aparece aqui."
+   },
+   "empty_title": {
+      "message": "Nada salvo ainda"
+   },
+   "entry_untitled": {
+      "message": "Página sem título"
+   },
+   "ext_description": {
+      "message": "Salva o que você digita em campos de texto, para que possa ser recuperado."
+   },
+   "kind_formatted": {
+      "message": "formatado"
+   },
+   "list_copy_html": {
+      "message": "Copiar como HTML"
+   },
+   "list_copy_text": {
+      "message": "Copiar texto"
+   },
+   "list_count": {
+      "message": "Textos salvos: $1"
+   },
+   "list_count_filtered": {
+      "message": "Mostrando $1 de $2"
+   },
+   "list_delete_all": {
+      "message": "Excluir tudo"
+   },
+   "list_delete_selected": {
+      "message": "Excluir selecionados ($1)"
+   },
+   "list_detail_meta": {
+      "message": "Última alteração: $1, início: $2, caracteres: $3, $4"
+   },
+   "list_detail_none": {
+      "message": "Escolha um texto salvo na lista para lê-lo aqui."
+   },
+   "list_formatted_label": {
+      "message": "Texto salvo com a formatação"
+   },
+   "list_no_matches": {
+      "message": "Nenhum texto salvo corresponde"
+   },
+   "list_no_matches_hint": {
+      "message": "Tente menos palavras ou palavras mais curtas. A pesquisa abrange o endereço, o título da página e o texto."
+   },
+   "list_search_label": {
+      "message": "Pesquisar textos salvos"
+   },
+   "list_search_placeholder": {
+      "message": "Pesquisar endereço, título e texto"
+   },
+   "list_select_all": {
+      "message": "Selecionar todos os exibidos"
+   },
+   "list_select_one": {
+      "message": "Selecionar $1"
+   },
+   "list_show_formatting": {
+      "message": "Mostrar formatação"
+   },
+   "list_text_label": {
+      "message": "Texto salvo"
+   },
+   "list_title": {
+      "message": "Textos salvos"
+   },
+   "load_failed": {
+      "message": "Não foi possível carregar os textos salvos: $1"
+   },
+   "nav_label": {
+      "message": "Páginas"
+   },
+   "nav_list": {
+      "message": "Textos salvos"
+   },
+   "nav_settings": {
+      "message": "Configurações"
+   },
+   "options_autoClean": {
+      "message": "Excluir automaticamente os textos salvos mais antigos"
+   },
+   "options_autoClean_desc": {
+      "message": "A limpeza é feita quando o navegador inicia e uma vez por hora. Textos excluídos não podem ser recuperados."
+   },
+   "options_dedupe": {
+      "message": "Remover cópias antigas do mesmo texto"
+   },
+   "options_dedupe_desc": {
+      "message": "Quando dois textos salvos têm o mesmo conteúdo, só fica o alterado mais recentemente, seja qual for a página de origem. Isso acontece quando você sai de um campo de texto e em cada limpeza."
+   },
+   "options_deleteAll": {
+      "message": "Excluir todos os textos salvos"
+   },
+   "options_deleteAll_button": {
+      "message": "Excluir todos os textos salvos"
+   },
+   "options_deleteAll_desc": {
+      "message": "Remove todos os textos salvos de uma vez. Suas configurações e a lista de páginas ignoradas continuam."
+   },
+   "options_export": {
+      "message": "Exportar todos os textos salvos"
+   },
+   "options_export_button": {
+      "message": "Exportar CSV"
+   },
+   "options_export_desc": {
+      "message": "Baixa um arquivo CSV com o endereço, o título, os horários e o conteúdo de cada texto salvo."
+   },
+   "options_group_cleanup": {
+      "message": "Limpeza"
+   },
+   "options_group_display": {
+      "message": "Exibição"
+   },
+   "options_group_saving": {
+      "message": "Salvamento"
+   },
+   "options_group_saving_intro": {
+      "message": "Áreas de texto e editores de texto formatado são salvos logo após cada alteração, seja qual for a origem: digitação, colagem, ditado ou correção automática. Campos de uma linha, como caixas de pesquisa e formulários de login, nunca são salvos. Alterações feitas aqui valem na hora para as páginas abertas."
+   },
+   "options_group_storage": {
+      "message": "Armazenamento"
+   },
+   "options_invalid_keep": {
+      "message": "Digite um número inteiro, 1 ou maior. Este valor não foi salvo."
+   },
+   "options_invalid_size": {
+      "message": "Digite um número inteiro, 0 ou maior. Este valor não foi salvo."
+   },
+   "options_keepNewest": {
+      "message": "Manter os mais recentes"
+   },
+   "options_keepNewest_desc": {
+      "message": "A limpeza mantém essa quantidade de textos salvos alterados mais recentemente e exclui o resto."
+   },
+   "options_language": {
+      "message": "Idioma da interface"
+   },
+   "options_language_auto": {
+      "message": "Automático (idioma do navegador): $1"
+   },
+   "options_language_desc": {
+      "message": "O modo automático usa o idioma do seu navegador, ou o inglês se o TextCache não tiver esse idioma."
+   },
+   "options_lead": {
+      "message": "O TextCache guarda uma cópia do que você digita em áreas de texto, para que você possa recuperar o texto se uma página travar ou um formulário se perder. Cada alteração feita aqui é salva na hora."
+   },
+   "options_maxItemKb": {
+      "message": "Maior texto a salvar"
+   },
+   "options_maxItemKb_desc": {
+      "message": "Um texto maior que isso não é salvo: a última versão que coube é mantida, e o ícone na barra de ferramentas mostra um selo nessa guia. Em editores de texto formatado, a formatação (HTML) conta para o tamanho. 0 significa sem limite."
+   },
+   "options_popupWidth": {
+      "message": "Largura do pop-up"
+   },
+   "options_popupWidth_desc": {
+      "message": "Qual é a largura da janela que abre pelo ícone da barra de ferramentas. Vale a partir da próxima abertura do pop-up."
+   },
+   "options_popupWidth_narrow": {
+      "message": "Estreita"
+   },
+   "options_popupWidth_normal": {
+      "message": "Normal"
+   },
+   "options_popupWidth_wide": {
+      "message": "Larga"
+   },
+   "options_preview_none": {
+      "message": "Com essas configurações, a próxima limpeza não exclui nada. Textos salvos: $1."
+   },
+   "options_preview_off": {
+      "message": "A limpeza automática está desativada, então os textos salvos só são excluídos quando você os exclui."
+   },
+   "options_preview_some": {
+      "message": "Textos salvos que a próxima limpeza vai excluir com essas configurações: $1 de $2."
+   },
+   "options_skip": {
+      "message": "Páginas ignoradas"
+   },
+   "options_skip_desc": {
+      "message": "Uma entrada por linha. Nada é salvo em uma página cujo endereço contenha uma entrada em qualquer parte, então slack.com também abrange app.slack.com. Frames incorporados são verificados pelo próprio endereço."
+   },
+   "options_skip_save": {
+      "message": "Salvar lista"
+   },
+   "options_title": {
+      "message": "Configurações do TextCache"
+   },
+   "options_unit_kb": {
+      "message": "KB"
+   },
+   "options_unit_texts": {
+      "message": "dos textos salvos"
+   },
+   "options_usage_count": {
+      "message": "Textos salvos"
+   },
+   "options_usage_space": {
+      "message": "Espaço usado"
+   },
+   "options_usage_space_of": {
+      "message": "$1 de $2"
+   },
+   "popup_back": {
+      "message": "Todos os textos salvos"
+   },
+   "popup_copy_one": {
+      "message": "Copiar o texto salvo em $1"
+   },
+   "popup_detail_meta": {
+      "message": "$1, última alteração: $2"
+   },
+   "popup_more": {
+      "message": "Aqui aparecem os $1 mais recentes de $2. A lista completa tem todos."
+   },
+   "popup_none_here": {
+      "message": "Nada salvo neste site"
+   },
+   "popup_none_here_hint": {
+      "message": "Desative “Este site” para ver os textos salvos em todos os lugares."
+   },
+   "popup_open_list": {
+      "message": "Abrir lista completa"
+   },
+   "popup_this_site": {
+      "message": "Este site"
+   },
+   "status_copied": {
+      "message": "Copiado"
+   },
+   "status_deleted": {
+      "message": "Excluídos: $1"
+   },
+   "status_deleted_all": {
+      "message": "Todos os textos salvos foram excluídos"
+   },
+   "status_failed": {
+      "message": "Não deu certo: $1"
+   },
+   "status_not_saved": {
+      "message": "Não salvo: $1"
+   },
+   "status_saved": {
+      "message": "Salvo"
+   },
+   "time_just_now": {
+      "message": "agora mesmo"
+   },
+   "time_unknown": {
+      "message": "sem data"
+   }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="options_title"></title>
+    <link rel="stylesheet" href="/ui/base.css">
+    <link rel="stylesheet" href="./options.css">
+    <script type="module" src="./options.js"></script>
+</head>
+<body>
+<header class="appbar">
+    <div class="appbar-inner">
+        <span class="brand"><img src="/icons/icon-48.png" alt="" width="24" height="24"><span data-i18n="app_name"></span></span>
+        <nav class="nav" data-i18n-attr="aria-label:nav_label">
+            <a href="/list/list.html" data-i18n="nav_list"></a>
+            <a href="/options/options.html" aria-current="page" data-i18n="nav_settings"></a>
+        </nav>
+    </div>
+</header>
+
+<main class="page">
+    <header class="masthead">
+        <h1 data-i18n="options_title"></h1>
+        <p class="lead" data-i18n="options_lead"></p>
+    </header>
+
+    <section class="group" aria-labelledby="group_display">
+        <h2 id="group_display" data-i18n="options_group_display"></h2>
+
+        <div class="setting">
+            <div class="setting-text">
+                <label class="setting-title" for="language" data-i18n="options_language"></label>
+                <p class="setting-desc" id="language_desc" data-i18n="options_language_desc"></p>
+            </div>
+            <div class="setting-control">
+                <select id="language" aria-describedby="language_desc"></select>
+            </div>
+        </div>
+
+        <div class="setting">
+            <div class="setting-text">
+                <label class="setting-title" for="popupWidth" data-i18n="options_popupWidth"></label>
+                <p class="setting-desc" id="popupWidth_desc" data-i18n="options_popupWidth_desc"></p>
+            </div>
+            <div class="setting-control">
+                <select id="popupWidth" aria-describedby="popupWidth_desc">
+                    <option value="narrow" data-i18n="options_popupWidth_narrow"></option>
+                    <option value="normal" data-i18n="options_popupWidth_normal"></option>
+                    <option value="wide" data-i18n="options_popupWidth_wide"></option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section class="group" aria-labelledby="group_saving">
+        <h2 id="group_saving" data-i18n="options_group_saving"></h2>
+        <p class="group-intro" data-i18n="options_group_saving_intro"></p>
+
+        <div class="setting">
+            <div class="setting-text">
+                <label class="setting-title" for="maxItemKb" data-i18n="options_maxItemKb"></label>
+                <p class="setting-desc" id="maxItemKb_desc" data-i18n="options_maxItemKb_desc"></p>
+            </div>
+            <div class="setting-control">
+                <input class="number" type="number" min="0" step="1" inputmode="numeric" id="maxItemKb"
+                    aria-describedby="maxItemKb_desc maxItemKb_error">
+                <span class="unit" data-i18n="options_unit_kb"></span>
+            </div>
+            <p class="field-error" id="maxItemKb_error" data-i18n="options_invalid_size" hidden></p>
+        </div>
+
+        <div class="setting setting-wide">
+            <div class="setting-text">
+                <label class="setting-title" for="skip" data-i18n="options_skip"></label>
+                <p class="setting-desc" id="skip_desc" data-i18n="options_skip_desc"></p>
+            </div>
+            <div class="setting-control">
+                <textarea id="skip" rows="4" dir="auto" spellcheck="false" autocomplete="off" aria-describedby="skip_desc"></textarea>
+                <button type="button" class="button" id="saveSkip" data-i18n="options_skip_save"></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="group" aria-labelledby="group_cleanup">
+        <h2 id="group_cleanup" data-i18n="options_group_cleanup"></h2>
+
+        <div class="setting">
+            <div class="setting-text">
+                <label class="setting-title" for="autoClean" data-i18n="options_autoClean"></label>
+                <p class="setting-desc" id="autoClean_desc" data-i18n="options_autoClean_desc"></p>
+            </div>
+            <div class="setting-control">
+                <input class="switch" type="checkbox" id="autoClean" aria-describedby="autoClean_desc">
+            </div>
+        </div>
+
+        <div class="setting" id="keepNewestRow">
+            <div class="setting-text">
+                <label class="setting-title" for="keepNewest" data-i18n="options_keepNewest"></label>
+                <p class="setting-desc" id="keepNewest_desc" data-i18n="options_keepNewest_desc"></p>
+            </div>
+            <div class="setting-control">
+                <input class="number" type="number" min="1" step="1" inputmode="numeric" id="keepNewest"
+                    aria-describedby="keepNewest_desc keepNewest_error">
+                <span class="unit" data-i18n="options_unit_texts"></span>
+            </div>
+            <p class="field-error" id="keepNewest_error" data-i18n="options_invalid_keep" hidden></p>
+        </div>
+
+        <div class="setting">
+            <div class="setting-text">
+                <label class="setting-title" for="dedupe" data-i18n="options_dedupe"></label>
+                <p class="setting-desc" id="dedupe_desc" data-i18n="options_dedupe_desc"></p>
+            </div>
+            <div class="setting-control">
+                <input class="switch" type="checkbox" id="dedupe" aria-describedby="dedupe_desc">
+            </div>
+        </div>
+
+        <p class="preview" id="cleanupPreview" aria-live="polite"></p>
+    </section>
+
+    <section class="group" aria-labelledby="group_storage">
+        <h2 id="group_storage" data-i18n="options_group_storage"></h2>
+
+        <div class="usage" id="storageUsage"></div>
+
+        <div class="setting">
+            <div class="setting-text">
+                <span class="setting-title" id="exportCsv_title" data-i18n="options_export"></span>
+                <p class="setting-desc" id="exportCsv_desc" data-i18n="options_export_desc"></p>
+            </div>
+            <div class="setting-control">
+                <button type="button" class="button quiet" id="exportCsv" data-i18n="options_export_button"
+                    aria-describedby="exportCsv_title exportCsv_desc"></button>
+            </div>
+        </div>
+
+        <div class="setting">
+            <div class="setting-text">
+                <span class="setting-title" id="deleteAll_title" data-i18n="options_deleteAll"></span>
+                <p class="setting-desc" id="deleteAll_desc" data-i18n="options_deleteAll_desc"></p>
+            </div>
+            <div class="setting-control">
+                <button type="button" class="button quiet danger" id="deleteAll" data-i18n="options_deleteAll_button"
+                    aria-describedby="deleteAll_title deleteAll_desc"></button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<p class="status" id="status" role="status" aria-live="polite"></p>
+
+<dialog class="confirm" id="confirm">
+    <form method="dialog">
+        <p id="confirmText"></p>
+        <div class="confirm-actions">
+            <button type="submit" class="button quiet" id="confirmCancel" value="cancel" data-i18n="confirm_cancel"></button>
+            <button type="submit" class="button danger" id="confirmOk" value="ok"></button>
+        </div>
+    </form>
+</dialog>
+</body>
+</html>

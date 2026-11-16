@@ -1,0 +1,296 @@
+{
+   "app_name": {
+      "message": "TextCache"
+   },
+   "badge_save_failed": {
+      "message": "TextCache は保存できませんでした: $1"
+   },
+   "badge_too_large": {
+      "message": "TextCache はこのタブのテキストを保存しませんでした: サイズ（$1）が上限（$2）を超えています"
+   },
+   "confirm_cancel": {
+      "message": "キャンセル"
+   },
+   "confirm_delete_all": {
+      "message": "保存したテキストをすべて削除しますか（合計 $1 件）？削除したテキストは元に戻せません。設定はそのまま残ります。"
+   },
+   "confirm_delete_all_ok": {
+      "message": "すべて削除"
+   },
+   "confirm_delete_selected": {
+      "message": "選択した保存したテキストを削除しますか（$1 件）？削除したテキストは元に戻せません。"
+   },
+   "confirm_delete_selected_ok": {
+      "message": "選択項目を削除"
+   },
+   "copy": {
+      "message": "コピー"
+   },
+   "day_today": {
+      "message": "今日"
+   },
+   "day_unknown": {
+      "message": "日付なし"
+   },
+   "day_yesterday": {
+      "message": "昨日"
+   },
+   "delete": {
+      "message": "削除"
+   },
+   "empty_hint": {
+      "message": "任意のウェブページのテキストエリアやリッチテキストエディタに入力すると、そのテキストがここに表示されます。"
+   },
+   "empty_title": {
+      "message": "まだ何も保存されていません"
+   },
+   "entry_untitled": {
+      "message": "無題のページ"
+   },
+   "ext_description": {
+      "message": "テキスト欄に入力した内容を保存し、後から復元できるようにします。"
+   },
+   "kind_formatted": {
+      "message": "書式付き"
+   },
+   "list_copy_html": {
+      "message": "HTML としてコピー"
+   },
+   "list_copy_text": {
+      "message": "テキストをコピー"
+   },
+   "list_count": {
+      "message": "保存したテキスト: $1 件"
+   },
+   "list_count_filtered": {
+      "message": "$2 件中 $1 件を表示"
+   },
+   "list_delete_all": {
+      "message": "すべて削除"
+   },
+   "list_delete_selected": {
+      "message": "選択項目を削除（$1）"
+   },
+   "list_detail_meta": {
+      "message": "最終変更: $1、開始: $2、文字数: $3、$4"
+   },
+   "list_detail_none": {
+      "message": "一覧から保存したテキストを選ぶと、ここで読めます。"
+   },
+   "list_formatted_label": {
+      "message": "書式付きの保存したテキスト"
+   },
+   "list_no_matches": {
+      "message": "一致する保存したテキストはありません"
+   },
+   "list_no_matches_hint": {
+      "message": "語数を減らすか、短い語で試してください。検索対象はアドレス、ページのタイトル、テキストです。"
+   },
+   "list_search_label": {
+      "message": "保存したテキストを検索"
+   },
+   "list_search_placeholder": {
+      "message": "アドレス、タイトル、テキストを検索"
+   },
+   "list_select_all": {
+      "message": "表示中をすべて選択"
+   },
+   "list_select_one": {
+      "message": "$1 を選択"
+   },
+   "list_show_formatting": {
+      "message": "書式を表示"
+   },
+   "list_text_label": {
+      "message": "保存したテキスト"
+   },
+   "list_title": {
+      "message": "保存したテキスト"
+   },
+   "load_failed": {
+      "message": "保存したテキストを読み込めませんでした: $1"
+   },
+   "nav_label": {
+      "message": "ページ"
+   },
+   "nav_list": {
+      "message": "保存したテキスト"
+   },
+   "nav_settings": {
+      "message": "設定"
+   },
+   "options_autoClean": {
+      "message": "古い保存したテキストを自動的に削除"
+   },
+   "options_autoClean_desc": {
+      "message": "クリーンアップはブラウザの起動時と 1 時間ごとに実行されます。削除したテキストは元に戻せません。"
+   },
+   "options_dedupe": {
+      "message": "同じテキストの古いコピーを削除"
+   },
+   "options_dedupe_desc": {
+      "message": "2 つの保存したテキストが同じ内容の場合、どのページのものであっても、最後に変更されたものだけが残ります。テキスト欄から離れたときと、クリーンアップのたびに実行されます。"
+   },
+   "options_deleteAll": {
+      "message": "保存したテキストをすべて削除"
+   },
+   "options_deleteAll_button": {
+      "message": "保存したテキストをすべて削除"
+   },
+   "options_deleteAll_desc": {
+      "message": "保存したテキストを一度にすべて削除します。設定と除外するページの一覧は残ります。"
+   },
+   "options_export": {
+      "message": "保存したテキストをすべてエクスポート"
+   },
+   "options_export_button": {
+      "message": "CSV をエクスポート"
+   },
+   "options_export_desc": {
+      "message": "保存したテキストごとのアドレス、タイトル、日時、内容を含む CSV ファイルをダウンロードします。"
+   },
+   "options_group_cleanup": {
+      "message": "クリーンアップ"
+   },
+   "options_group_display": {
+      "message": "表示"
+   },
+   "options_group_saving": {
+      "message": "保存"
+   },
+   "options_group_saving_intro": {
+      "message": "テキストエリアとリッチテキストエディタは、入力、貼り付け、音声入力、自動修正など、どの方法で変更しても、変更のたびに少し後で保存されます。検索ボックスやログインフォームのような 1 行の入力欄は保存されません。ここでの変更は開いているページにすぐ反映されます。"
+   },
+   "options_group_storage": {
+      "message": "ストレージ"
+   },
+   "options_invalid_keep": {
+      "message": "1 以上の整数を入力してください。この値は保存されていません。"
+   },
+   "options_invalid_size": {
+      "message": "0 以上の整数を入力してください。この値は保存されていません。"
+   },
+   "options_keepNewest": {
+      "message": "最新のものを残す数"
+   },
+   "options_keepNewest_desc": {
+      "message": "クリーンアップでは、最後に変更された保存したテキストをこの数だけ残し、それ以外を削除します。"
+   },
+   "options_language": {
+      "message": "表示言語"
+   },
+   "options_language_auto": {
+      "message": "自動（ブラウザの言語）: $1"
+   },
+   "options_language_desc": {
+      "message": "自動ではブラウザの言語を使い、TextCache にその言語がない場合は英語を使います。"
+   },
+   "options_lead": {
+      "message": "TextCache はテキストエリアに入力した内容のコピーを保持するので、ページがクラッシュしたりフォームが失われたりしても取り戻せます。ここでの変更はすぐに保存されます。"
+   },
+   "options_maxItemKb": {
+      "message": "保存するテキストの最大サイズ"
+   },
+   "options_maxItemKb_desc": {
+      "message": "これより大きいテキストは保存されません。上限内だった最後の版が残り、そのタブのツールバーアイコンにバッジが表示されます。リッチテキストエディタでは書式（HTML）もサイズに含まれます。0 は無制限です。"
+   },
+   "options_popupWidth": {
+      "message": "ポップアップの幅"
+   },
+   "options_popupWidth_desc": {
+      "message": "ツールバーのアイコンから開くウィンドウの幅です。次にポップアップを開いたときから適用されます。"
+   },
+   "options_popupWidth_narrow": {
+      "message": "狭い"
+   },
+   "options_popupWidth_normal": {
+      "message": "標準"
+   },
+   "options_popupWidth_wide": {
+      "message": "広い"
+   },
+   "options_preview_none": {
+      "message": "この設定では、次回のクリーンアップで削除されるものはありません。保存したテキスト: $1 件。"
+   },
+   "options_preview_off": {
+      "message": "自動クリーンアップはオフなので、保存したテキストはご自身で削除したときだけ削除されます。"
+   },
+   "options_preview_some": {
+      "message": "この設定では、次回のクリーンアップで保存したテキスト $2 件のうち $1 件が削除されます。"
+   },
+   "options_skip": {
+      "message": "除外するページ"
+   },
+   "options_skip_desc": {
+      "message": "1 行に 1 項目。アドレスのどこかに項目を含むページでは何も保存されないため、slack.com は app.slack.com も対象になります。埋め込みフレームはそれ自身のアドレスで判定されます。"
+   },
+   "options_skip_save": {
+      "message": "一覧を保存"
+   },
+   "options_title": {
+      "message": "TextCache の設定"
+   },
+   "options_unit_kb": {
+      "message": "KB"
+   },
+   "options_unit_texts": {
+      "message": "件"
+   },
+   "options_usage_count": {
+      "message": "保存したテキスト"
+   },
+   "options_usage_space": {
+      "message": "使用容量"
+   },
+   "options_usage_space_of": {
+      "message": "$1 / $2"
+   },
+   "popup_back": {
+      "message": "保存したテキストすべて"
+   },
+   "popup_copy_one": {
+      "message": "$1 で保存したテキストをコピー"
+   },
+   "popup_detail_meta": {
+      "message": "$1、最終変更: $2"
+   },
+   "popup_more": {
+      "message": "ここには $2 件中最新の $1 件を表示しています。すべては完全な一覧で見られます。"
+   },
+   "popup_none_here": {
+      "message": "このサイトでは何も保存されていません"
+   },
+   "popup_none_here_hint": {
+      "message": "「このサイト」をオフにすると、すべての場所で保存したテキストが表示されます。"
+   },
+   "popup_open_list": {
+      "message": "完全な一覧を開く"
+   },
+   "popup_this_site": {
+      "message": "このサイト"
+   },
+   "status_copied": {
+      "message": "コピーしました"
+   },
+   "status_deleted": {
+      "message": "削除しました: $1"
+   },
+   "status_deleted_all": {
+      "message": "保存したテキストをすべて削除しました"
+   },
+   "status_failed": {
+      "message": "うまくいきませんでした: $1"
+   },
+   "status_not_saved": {
+      "message": "保存されていません: $1"
+   },
+   "status_saved": {
+      "message": "保存しました"
+   },
+   "time_just_now": {
+      "message": "たった今"
+   },
+   "time_unknown": {
+      "message": "不明"
+   }
+}

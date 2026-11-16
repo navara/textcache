@@ -1,0 +1,296 @@
+{
+   "app_name": {
+      "message": "TextCache"
+   },
+   "badge_save_failed": {
+      "message": "TextCache konnte nicht speichern: $1"
+   },
+   "badge_too_large": {
+      "message": "TextCache hat in diesem Tab einen Text nicht gespeichert: Seine Größe ($1) liegt über dem Limit ($2)"
+   },
+   "confirm_cancel": {
+      "message": "Abbrechen"
+   },
+   "confirm_delete_all": {
+      "message": "Alle gespeicherten Texte löschen (insgesamt $1)? Gelöschte Texte lassen sich nicht wiederherstellen. Ihre Einstellungen bleiben erhalten."
+   },
+   "confirm_delete_all_ok": {
+      "message": "Alle löschen"
+   },
+   "confirm_delete_selected": {
+      "message": "Die ausgewählten gespeicherten Texte löschen ($1)? Gelöschte Texte lassen sich nicht wiederherstellen."
+   },
+   "confirm_delete_selected_ok": {
+      "message": "Auswahl löschen"
+   },
+   "copy": {
+      "message": "Kopieren"
+   },
+   "day_today": {
+      "message": "Heute"
+   },
+   "day_unknown": {
+      "message": "Ohne Datum"
+   },
+   "day_yesterday": {
+      "message": "Gestern"
+   },
+   "delete": {
+      "message": "Löschen"
+   },
+   "empty_hint": {
+      "message": "Schreiben Sie auf einer beliebigen Webseite in ein Textfeld oder einen Editor für formatierten Text, dann erscheint der Text hier."
+   },
+   "empty_title": {
+      "message": "Noch nichts gespeichert"
+   },
+   "entry_untitled": {
+      "message": "Seite ohne Titel"
+   },
+   "ext_description": {
+      "message": "Speichert, was Sie in Textfelder eingeben, damit es sich wiederherstellen lässt."
+   },
+   "kind_formatted": {
+      "message": "formatiert"
+   },
+   "list_copy_html": {
+      "message": "Als HTML kopieren"
+   },
+   "list_copy_text": {
+      "message": "Text kopieren"
+   },
+   "list_count": {
+      "message": "Gespeicherte Texte: $1"
+   },
+   "list_count_filtered": {
+      "message": "Angezeigt: $1 von $2"
+   },
+   "list_delete_all": {
+      "message": "Alle löschen"
+   },
+   "list_delete_selected": {
+      "message": "Auswahl löschen ($1)"
+   },
+   "list_detail_meta": {
+      "message": "Zuletzt geändert: $1, begonnen: $2, Zeichen: $3, $4"
+   },
+   "list_detail_none": {
+      "message": "Wählen Sie einen gespeicherten Text aus der Liste, um ihn hier zu lesen."
+   },
+   "list_formatted_label": {
+      "message": "Gespeicherter Text mit Formatierung"
+   },
+   "list_no_matches": {
+      "message": "Kein gespeicherter Text passt"
+   },
+   "list_no_matches_hint": {
+      "message": "Versuchen Sie weniger oder kürzere Wörter. Gesucht wird in Adresse, Seitentitel und Text."
+   },
+   "list_search_label": {
+      "message": "Gespeicherte Texte durchsuchen"
+   },
+   "list_search_placeholder": {
+      "message": "Adresse, Titel und Text durchsuchen"
+   },
+   "list_select_all": {
+      "message": "Alle angezeigten auswählen"
+   },
+   "list_select_one": {
+      "message": "$1 auswählen"
+   },
+   "list_show_formatting": {
+      "message": "Formatierung anzeigen"
+   },
+   "list_text_label": {
+      "message": "Gespeicherter Text"
+   },
+   "list_title": {
+      "message": "Gespeicherte Texte"
+   },
+   "load_failed": {
+      "message": "Die gespeicherten Texte konnten nicht geladen werden: $1"
+   },
+   "nav_label": {
+      "message": "Seiten"
+   },
+   "nav_list": {
+      "message": "Gespeicherte Texte"
+   },
+   "nav_settings": {
+      "message": "Einstellungen"
+   },
+   "options_autoClean": {
+      "message": "Ältere gespeicherte Texte automatisch löschen"
+   },
+   "options_autoClean_desc": {
+      "message": "Die Bereinigung läuft beim Start des Browsers und einmal pro Stunde. Gelöschte Texte lassen sich nicht wiederherstellen."
+   },
+   "options_dedupe": {
+      "message": "Ältere Kopien desselben Textes entfernen"
+   },
+   "options_dedupe_desc": {
+      "message": "Enthalten zwei gespeicherte Texte denselben Text, bleibt nur der zuletzt geänderte, egal von welcher Seite er stammt. Das geschieht, wenn Sie ein Textfeld verlassen, und bei jeder Bereinigung."
+   },
+   "options_deleteAll": {
+      "message": "Alle gespeicherten Texte löschen"
+   },
+   "options_deleteAll_button": {
+      "message": "Alle gespeicherten Texte löschen"
+   },
+   "options_deleteAll_desc": {
+      "message": "Entfernt alle gespeicherten Texte auf einmal. Ihre Einstellungen und die Liste der ausgenommenen Seiten bleiben erhalten."
+   },
+   "options_export": {
+      "message": "Alle gespeicherten Texte exportieren"
+   },
+   "options_export_button": {
+      "message": "CSV exportieren"
+   },
+   "options_export_desc": {
+      "message": "Lädt eine CSV-Datei mit Adresse, Titel, Zeiten und Inhalt aller gespeicherten Texte herunter."
+   },
+   "options_group_cleanup": {
+      "message": "Bereinigung"
+   },
+   "options_group_display": {
+      "message": "Anzeige"
+   },
+   "options_group_saving": {
+      "message": "Speichern"
+   },
+   "options_group_saving_intro": {
+      "message": "Textfelder und Editoren für formatierten Text werden kurz nach jeder Änderung gespeichert, egal wie sie entstanden ist: Tippen, Einfügen, Diktieren oder Autokorrektur. Einzeilige Felder wie Suchfelder und Anmeldeformulare werden nie gespeichert. Änderungen hier gelten sofort auch für geöffnete Seiten."
+   },
+   "options_group_storage": {
+      "message": "Speicher"
+   },
+   "options_invalid_keep": {
+      "message": "Geben Sie eine ganze Zahl ab 1 ein. Dieser Wert wurde nicht gespeichert."
+   },
+   "options_invalid_size": {
+      "message": "Geben Sie eine ganze Zahl ab 0 ein. Dieser Wert wurde nicht gespeichert."
+   },
+   "options_keepNewest": {
+      "message": "Die neuesten behalten"
+   },
+   "options_keepNewest_desc": {
+      "message": "Die Bereinigung behält so viele der zuletzt geänderten gespeicherten Texte und löscht den Rest."
+   },
+   "options_language": {
+      "message": "Anzeigesprache"
+   },
+   "options_language_auto": {
+      "message": "Automatisch (Browsersprache): $1"
+   },
+   "options_language_desc": {
+      "message": "Automatisch verwendet die Sprache Ihres Browsers oder Englisch, wenn TextCache sie nicht hat."
+   },
+   "options_lead": {
+      "message": "TextCache bewahrt eine Kopie dessen auf, was Sie in Textfelder eingeben, damit Sie es nach einem Seitenabsturz oder einem verlorenen Formular zurückbekommen. Jede Änderung hier wird sofort gespeichert."
+   },
+   "options_maxItemKb": {
+      "message": "Größter zu speichernder Text"
+   },
+   "options_maxItemKb_desc": {
+      "message": "Ein größerer Text wird nicht gespeichert: Die letzte Fassung, die passte, bleibt erhalten, und das Symbol in der Symbolleiste zeigt auf diesem Tab ein Abzeichen. In Editoren für formatierten Text zählt die Formatierung (HTML) zur Größe. 0 bedeutet ohne Limit."
+   },
+   "options_popupWidth": {
+      "message": "Breite des Pop-ups"
+   },
+   "options_popupWidth_desc": {
+      "message": "Wie breit das Fenster ist, das sich über das Symbol in der Symbolleiste öffnet. Gilt ab dem nächsten Öffnen des Pop-ups."
+   },
+   "options_popupWidth_narrow": {
+      "message": "Schmal"
+   },
+   "options_popupWidth_normal": {
+      "message": "Normal"
+   },
+   "options_popupWidth_wide": {
+      "message": "Breit"
+   },
+   "options_preview_none": {
+      "message": "Mit diesen Einstellungen löscht die nächste Bereinigung nichts. Gespeicherte Texte: $1."
+   },
+   "options_preview_off": {
+      "message": "Die automatische Bereinigung ist aus, gespeicherte Texte werden also nur gelöscht, wenn Sie sie löschen."
+   },
+   "options_preview_some": {
+      "message": "Gespeicherte Texte, die die nächste Bereinigung mit diesen Einstellungen löscht: $1 von $2."
+   },
+   "options_skip": {
+      "message": "Ausgenommene Seiten"
+   },
+   "options_skip_desc": {
+      "message": "Ein Eintrag pro Zeile. Auf einer Seite, deren Adresse irgendwo einen Eintrag enthält, wird nichts gespeichert, slack.com deckt also auch app.slack.com ab. Eingebettete Frames werden nach ihrer eigenen Adresse geprüft."
+   },
+   "options_skip_save": {
+      "message": "Liste speichern"
+   },
+   "options_title": {
+      "message": "TextCache-Einstellungen"
+   },
+   "options_unit_kb": {
+      "message": "KB"
+   },
+   "options_unit_texts": {
+      "message": "der gespeicherten Texte"
+   },
+   "options_usage_count": {
+      "message": "Gespeicherte Texte"
+   },
+   "options_usage_space": {
+      "message": "Belegter Speicher"
+   },
+   "options_usage_space_of": {
+      "message": "$1 von $2"
+   },
+   "popup_back": {
+      "message": "Alle gespeicherten Texte"
+   },
+   "popup_copy_one": {
+      "message": "Den auf $1 gespeicherten Text kopieren"
+   },
+   "popup_detail_meta": {
+      "message": "$1, zuletzt geändert: $2"
+   },
+   "popup_more": {
+      "message": "Hier stehen die neuesten $1 von $2. Die vollständige Liste enthält alle."
+   },
+   "popup_none_here": {
+      "message": "Auf dieser Website ist nichts gespeichert"
+   },
+   "popup_none_here_hint": {
+      "message": "Schalten Sie „Diese Website“ aus, um die überall gespeicherten Texte zu sehen."
+   },
+   "popup_open_list": {
+      "message": "Vollständige Liste öffnen"
+   },
+   "popup_this_site": {
+      "message": "Diese Website"
+   },
+   "status_copied": {
+      "message": "Kopiert"
+   },
+   "status_deleted": {
+      "message": "Gelöscht: $1"
+   },
+   "status_deleted_all": {
+      "message": "Alle gespeicherten Texte gelöscht"
+   },
+   "status_failed": {
+      "message": "Das hat nicht geklappt: $1"
+   },
+   "status_not_saved": {
+      "message": "Nicht gespeichert: $1"
+   },
+   "status_saved": {
+      "message": "Gespeichert"
+   },
+   "time_just_now": {
+      "message": "gerade eben"
+   },
+   "time_unknown": {
+      "message": "unbekannt"
+   }
+}

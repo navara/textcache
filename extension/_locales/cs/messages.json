@@ -1,0 +1,296 @@
+{
+   "app_name": {
+      "message": "TextCache"
+   },
+   "badge_save_failed": {
+      "message": "TextCache nemohl uložit text: $1"
+   },
+   "badge_too_large": {
+      "message": "TextCache v této kartě neuložil text: jeho velikost ($1) překračuje limit ($2)"
+   },
+   "confirm_cancel": {
+      "message": "Zrušit"
+   },
+   "confirm_delete_all": {
+      "message": "Smazat všechny uložené texty (celkem $1)? Smazané texty nelze obnovit. Nastavení zůstane beze změny."
+   },
+   "confirm_delete_all_ok": {
+      "message": "Smazat vše"
+   },
+   "confirm_delete_selected": {
+      "message": "Smazat vybrané uložené texty ($1)? Smazané texty nelze obnovit."
+   },
+   "confirm_delete_selected_ok": {
+      "message": "Smazat vybrané"
+   },
+   "copy": {
+      "message": "Kopírovat"
+   },
+   "day_today": {
+      "message": "Dnes"
+   },
+   "day_unknown": {
+      "message": "Bez data"
+   },
+   "day_yesterday": {
+      "message": "Včera"
+   },
+   "delete": {
+      "message": "Smazat"
+   },
+   "empty_hint": {
+      "message": "Pište do textového pole nebo editoru formátovaného textu na libovolné webové stránce a text se objeví tady."
+   },
+   "empty_title": {
+      "message": "Zatím nic uloženo"
+   },
+   "entry_untitled": {
+      "message": "Stránka bez názvu"
+   },
+   "ext_description": {
+      "message": "Ukládá, co píšete do textových polí, abyste to mohli obnovit."
+   },
+   "kind_formatted": {
+      "message": "formátovaný"
+   },
+   "list_copy_html": {
+      "message": "Kopírovat jako HTML"
+   },
+   "list_copy_text": {
+      "message": "Kopírovat text"
+   },
+   "list_count": {
+      "message": "Uložené texty: $1"
+   },
+   "list_count_filtered": {
+      "message": "Zobrazeno $1 z $2"
+   },
+   "list_delete_all": {
+      "message": "Smazat vše"
+   },
+   "list_delete_selected": {
+      "message": "Smazat vybrané ($1)"
+   },
+   "list_detail_meta": {
+      "message": "Naposledy změněno: $1, poprvé uloženo: $2, počet znaků: $3, velikost: $4"
+   },
+   "list_detail_none": {
+      "message": "Vyberte uložený text ze seznamu a přečtěte si ho tady."
+   },
+   "list_formatted_label": {
+      "message": "Uložený text s formátováním"
+   },
+   "list_no_matches": {
+      "message": "Žádný uložený text neodpovídá hledání"
+   },
+   "list_no_matches_hint": {
+      "message": "Zkuste méně slov nebo kratší slova. Hledá se v adrese, názvu stránky a textu."
+   },
+   "list_search_label": {
+      "message": "Hledat v uložených textech"
+   },
+   "list_search_placeholder": {
+      "message": "Hledat v adrese, názvu a textu"
+   },
+   "list_select_all": {
+      "message": "Vybrat vše zobrazené"
+   },
+   "list_select_one": {
+      "message": "Vybrat $1"
+   },
+   "list_show_formatting": {
+      "message": "Zobrazit formátování"
+   },
+   "list_text_label": {
+      "message": "Uložený text"
+   },
+   "list_title": {
+      "message": "Uložené texty"
+   },
+   "load_failed": {
+      "message": "Uložené texty se nepodařilo načíst: $1"
+   },
+   "nav_label": {
+      "message": "Stránky"
+   },
+   "nav_list": {
+      "message": "Uložené texty"
+   },
+   "nav_settings": {
+      "message": "Nastavení"
+   },
+   "options_autoClean": {
+      "message": "Automaticky mazat starší uložené texty"
+   },
+   "options_autoClean_desc": {
+      "message": "Úklid proběhne při spuštění prohlížeče a pak jednou za hodinu. Smazané texty nelze obnovit."
+   },
+   "options_dedupe": {
+      "message": "Odstraňovat starší kopie stejného textu"
+   },
+   "options_dedupe_desc": {
+      "message": "Když dva uložené texty obsahují stejný text, zůstane jen ten naposledy změněný, ať pochází z jakékoli stránky. Proběhne, když opustíte textové pole, a při každém úklidu."
+   },
+   "options_deleteAll": {
+      "message": "Smazat všechny uložené texty"
+   },
+   "options_deleteAll_button": {
+      "message": "Smazat všechny uložené texty"
+   },
+   "options_deleteAll_desc": {
+      "message": "Odstraní najednou všechny uložené texty. Nastavení i seznam vynechaných stránek zůstanou."
+   },
+   "options_export": {
+      "message": "Exportovat všechny uložené texty"
+   },
+   "options_export_button": {
+      "message": "Exportovat CSV"
+   },
+   "options_export_desc": {
+      "message": "Stáhne soubor CSV s adresou, názvem, časy a obsahem všech uložených textů."
+   },
+   "options_group_cleanup": {
+      "message": "Úklid"
+   },
+   "options_group_display": {
+      "message": "Zobrazení"
+   },
+   "options_group_saving": {
+      "message": "Ukládání"
+   },
+   "options_group_saving_intro": {
+      "message": "Textová pole a editory formátovaného textu se ukládají krátce po každé změně, ať vznikla jakkoli: psaním, vložením, diktováním nebo automatickou opravou. Jednořádková pole, například vyhledávání a přihlašovací formuláře, se neukládají nikdy. Změny tady se v otevřených stránkách projeví hned."
+   },
+   "options_group_storage": {
+      "message": "Úložiště"
+   },
+   "options_invalid_keep": {
+      "message": "Zadejte celé číslo, 1 nebo větší. Tato hodnota nebyla uložena."
+   },
+   "options_invalid_size": {
+      "message": "Zadejte celé číslo, 0 nebo větší. Tato hodnota nebyla uložena."
+   },
+   "options_keepNewest": {
+      "message": "Kolik nejnovějších uložených textů ponechat"
+   },
+   "options_keepNewest_desc": {
+      "message": "Úklid ponechá tento počet naposledy změněných uložených textů a ostatní smaže."
+   },
+   "options_language": {
+      "message": "Jazyk rozhraní"
+   },
+   "options_language_auto": {
+      "message": "Automaticky (jazyk prohlížeče): $1"
+   },
+   "options_language_desc": {
+      "message": "Automatická volba použije jazyk prohlížeče, a pokud ho TextCache nemá, angličtinu."
+   },
+   "options_lead": {
+      "message": "TextCache uchovává kopii toho, co píšete do textových polí, takže o text nepřijdete, když stránka spadne nebo se formulář ztratí. Každá změna tady se uloží hned, jak ji provedete."
+   },
+   "options_maxItemKb": {
+      "message": "Největší ukládaný text"
+   },
+   "options_maxItemKb_desc": {
+      "message": "Větší text se neuloží: zůstane poslední verze, která se vešla, a ikona na liště u té karty zobrazí odznak. U editorů formátovaného textu se do velikosti počítá i formátování (HTML). 0 znamená bez omezení."
+   },
+   "options_popupWidth": {
+      "message": "Šířka vyskakovacího okna"
+   },
+   "options_popupWidth_desc": {
+      "message": "Jak široké je okno, které se otevře z ikony na liště. Projeví se při příštím otevření okna."
+   },
+   "options_popupWidth_narrow": {
+      "message": "Úzké"
+   },
+   "options_popupWidth_normal": {
+      "message": "Normální"
+   },
+   "options_popupWidth_wide": {
+      "message": "Široké"
+   },
+   "options_preview_none": {
+      "message": "S tímto nastavením příští úklid nic nesmaže. Uložené texty: $1."
+   },
+   "options_preview_off": {
+      "message": "Automatický úklid je vypnutý, uložené texty se tedy smažou, jen když je smažete sami."
+   },
+   "options_preview_some": {
+      "message": "Uložené texty, které příští úklid s tímto nastavením smaže: $1 z $2."
+   },
+   "options_skip": {
+      "message": "Vynechané stránky"
+   },
+   "options_skip_desc": {
+      "message": "Jedna položka na řádek. Na stránce, jejíž adresa kdekoli obsahuje některou z položek, se nic neukládá, takže slack.com pokrývá i app.slack.com. Vložené rámce se posuzují podle vlastní adresy."
+   },
+   "options_skip_save": {
+      "message": "Uložit seznam"
+   },
+   "options_title": {
+      "message": "Nastavení TextCache"
+   },
+   "options_unit_kb": {
+      "message": "KB"
+   },
+   "options_unit_texts": {
+      "message": "ks"
+   },
+   "options_usage_count": {
+      "message": "Uložené texty"
+   },
+   "options_usage_space": {
+      "message": "Využité místo"
+   },
+   "options_usage_space_of": {
+      "message": "$1 z $2"
+   },
+   "popup_back": {
+      "message": "Všechny uložené texty"
+   },
+   "popup_copy_one": {
+      "message": "Kopírovat uložený text: $1"
+   },
+   "popup_detail_meta": {
+      "message": "$1, naposledy změněno: $2"
+   },
+   "popup_more": {
+      "message": "Zobrazeny jsou nejnovější: $1 z $2. Všechny najdete v úplném seznamu."
+   },
+   "popup_none_here": {
+      "message": "Na tomto webu není nic uloženo"
+   },
+   "popup_none_here_hint": {
+      "message": "Vypněte „Tento web“ a uvidíte texty uložené všude."
+   },
+   "popup_open_list": {
+      "message": "Otevřít úplný seznam"
+   },
+   "popup_this_site": {
+      "message": "Tento web"
+   },
+   "status_copied": {
+      "message": "Zkopírováno"
+   },
+   "status_deleted": {
+      "message": "Smazáno: $1"
+   },
+   "status_deleted_all": {
+      "message": "Všechny uložené texty byly smazány"
+   },
+   "status_failed": {
+      "message": "Nepodařilo se: $1"
+   },
+   "status_not_saved": {
+      "message": "Neuloženo: $1"
+   },
+   "status_saved": {
+      "message": "Uloženo"
+   },
+   "time_just_now": {
+      "message": "právě teď"
+   },
+   "time_unknown": {
+      "message": "neznámé"
+   }
+}

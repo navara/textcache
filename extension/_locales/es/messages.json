@@ -1,0 +1,296 @@
+{
+   "app_name": {
+      "message": "TextCache"
+   },
+   "badge_save_failed": {
+      "message": "TextCache no pudo guardar: $1"
+   },
+   "badge_too_large": {
+      "message": "TextCache no guardó un texto en esta pestaña: su tamaño ($1) supera el límite ($2)"
+   },
+   "confirm_cancel": {
+      "message": "Cancelar"
+   },
+   "confirm_delete_all": {
+      "message": "¿Eliminar todos los textos guardados ($1 en total)? Los textos eliminados no se pueden recuperar. Tu configuración no cambia."
+   },
+   "confirm_delete_all_ok": {
+      "message": "Eliminar todo"
+   },
+   "confirm_delete_selected": {
+      "message": "¿Eliminar los textos guardados seleccionados ($1)? Los textos eliminados no se pueden recuperar."
+   },
+   "confirm_delete_selected_ok": {
+      "message": "Eliminar selección"
+   },
+   "copy": {
+      "message": "Copiar"
+   },
+   "day_today": {
+      "message": "Hoy"
+   },
+   "day_unknown": {
+      "message": "Sin fecha"
+   },
+   "day_yesterday": {
+      "message": "Ayer"
+   },
+   "delete": {
+      "message": "Eliminar"
+   },
+   "empty_hint": {
+      "message": "Escribe en un área de texto o en un editor de texto enriquecido de cualquier página web y el texto aparecerá aquí."
+   },
+   "empty_title": {
+      "message": "Todavía no hay nada guardado"
+   },
+   "entry_untitled": {
+      "message": "Página sin título"
+   },
+   "ext_description": {
+      "message": "Guarda lo que escribes en los campos de texto para que puedas recuperarlo."
+   },
+   "kind_formatted": {
+      "message": "con formato"
+   },
+   "list_copy_html": {
+      "message": "Copiar como HTML"
+   },
+   "list_copy_text": {
+      "message": "Copiar texto"
+   },
+   "list_count": {
+      "message": "Textos guardados: $1"
+   },
+   "list_count_filtered": {
+      "message": "Mostrando $1 de $2"
+   },
+   "list_delete_all": {
+      "message": "Eliminar todo"
+   },
+   "list_delete_selected": {
+      "message": "Eliminar selección ($1)"
+   },
+   "list_detail_meta": {
+      "message": "Último cambio: $1, iniciado: $2, caracteres: $3, $4"
+   },
+   "list_detail_none": {
+      "message": "Elige un texto guardado de la lista para leerlo aquí."
+   },
+   "list_formatted_label": {
+      "message": "Texto guardado con su formato"
+   },
+   "list_no_matches": {
+      "message": "Ningún texto guardado coincide"
+   },
+   "list_no_matches_hint": {
+      "message": "Prueba con menos palabras o más cortas. La búsqueda incluye la dirección, el título de la página y el texto."
+   },
+   "list_search_label": {
+      "message": "Buscar en los textos guardados"
+   },
+   "list_search_placeholder": {
+      "message": "Buscar en dirección, título y texto"
+   },
+   "list_select_all": {
+      "message": "Seleccionar todo lo mostrado"
+   },
+   "list_select_one": {
+      "message": "Seleccionar $1"
+   },
+   "list_show_formatting": {
+      "message": "Mostrar formato"
+   },
+   "list_text_label": {
+      "message": "Texto guardado"
+   },
+   "list_title": {
+      "message": "Textos guardados"
+   },
+   "load_failed": {
+      "message": "No se pudieron cargar los textos guardados: $1"
+   },
+   "nav_label": {
+      "message": "Páginas"
+   },
+   "nav_list": {
+      "message": "Textos guardados"
+   },
+   "nav_settings": {
+      "message": "Configuración"
+   },
+   "options_autoClean": {
+      "message": "Eliminar automáticamente los textos guardados más antiguos"
+   },
+   "options_autoClean_desc": {
+      "message": "La limpieza se ejecuta al iniciar el navegador y una vez por hora. Los textos eliminados no se pueden recuperar."
+   },
+   "options_dedupe": {
+      "message": "Quitar copias antiguas del mismo texto"
+   },
+   "options_dedupe_desc": {
+      "message": "Cuando dos textos guardados contienen el mismo texto, solo se conserva el modificado más recientemente, venga de la página que venga. Ocurre al salir de un campo de texto y en cada limpieza."
+   },
+   "options_deleteAll": {
+      "message": "Eliminar todos los textos guardados"
+   },
+   "options_deleteAll_button": {
+      "message": "Eliminar todos los textos guardados"
+   },
+   "options_deleteAll_desc": {
+      "message": "Quita todos los textos guardados de una vez. Tu configuración y la lista de páginas excluidas se mantienen."
+   },
+   "options_export": {
+      "message": "Exportar todos los textos guardados"
+   },
+   "options_export_button": {
+      "message": "Exportar CSV"
+   },
+   "options_export_desc": {
+      "message": "Descarga un archivo CSV con la dirección, el título, las fechas y el contenido de cada texto guardado."
+   },
+   "options_group_cleanup": {
+      "message": "Limpieza"
+   },
+   "options_group_display": {
+      "message": "Visualización"
+   },
+   "options_group_saving": {
+      "message": "Guardado"
+   },
+   "options_group_saving_intro": {
+      "message": "Las áreas de texto y los editores de texto enriquecido se guardan poco después de cada cambio, sea cual sea su origen: escritura, pegado, dictado o autocorrección. Los campos de una sola línea, como los cuadros de búsqueda y los formularios de inicio de sesión, nunca se guardan. Los cambios hechos aquí se aplican al instante en las páginas abiertas."
+   },
+   "options_group_storage": {
+      "message": "Almacenamiento"
+   },
+   "options_invalid_keep": {
+      "message": "Introduce un número entero, 1 o mayor. Este valor no se ha guardado."
+   },
+   "options_invalid_size": {
+      "message": "Introduce un número entero, 0 o mayor. Este valor no se ha guardado."
+   },
+   "options_keepNewest": {
+      "message": "Conservar los más recientes"
+   },
+   "options_keepNewest_desc": {
+      "message": "La limpieza conserva esta cantidad de textos guardados modificados más recientemente y elimina el resto."
+   },
+   "options_language": {
+      "message": "Idioma de la interfaz"
+   },
+   "options_language_auto": {
+      "message": "Automático (idioma del navegador): $1"
+   },
+   "options_language_desc": {
+      "message": "La opción automática usa el idioma de tu navegador, o el inglés si TextCache no lo tiene."
+   },
+   "options_lead": {
+      "message": "TextCache guarda una copia de lo que escribes en las áreas de texto para que puedas recuperarlo si una página falla o se pierde un formulario. Cada cambio que hagas aquí se guarda al instante."
+   },
+   "options_maxItemKb": {
+      "message": "Tamaño máximo de un texto guardado"
+   },
+   "options_maxItemKb_desc": {
+      "message": "Un texto más grande no se guarda: se conserva la última versión que cabía y el icono de la barra de herramientas muestra una insignia en esa pestaña. En los editores de texto enriquecido, el formato (HTML) cuenta para el tamaño. 0 significa sin límite."
+   },
+   "options_popupWidth": {
+      "message": "Ancho de la ventana emergente"
+   },
+   "options_popupWidth_desc": {
+      "message": "Qué ancho tiene la ventana que se abre desde el icono de la barra de herramientas. Se aplica la próxima vez que se abra."
+   },
+   "options_popupWidth_narrow": {
+      "message": "Estrecha"
+   },
+   "options_popupWidth_normal": {
+      "message": "Normal"
+   },
+   "options_popupWidth_wide": {
+      "message": "Ancha"
+   },
+   "options_preview_none": {
+      "message": "Con esta configuración, la próxima limpieza no elimina nada. Textos guardados: $1."
+   },
+   "options_preview_off": {
+      "message": "La limpieza automática está desactivada, así que los textos guardados solo se eliminan cuando tú los eliminas."
+   },
+   "options_preview_some": {
+      "message": "Textos guardados que eliminará la próxima limpieza con esta configuración: $1 de $2."
+   },
+   "options_skip": {
+      "message": "Páginas excluidas"
+   },
+   "options_skip_desc": {
+      "message": "Una entrada por línea. No se guarda nada en una página cuya dirección contenga una entrada en cualquier parte, así que slack.com también cubre app.slack.com. Los marcos insertados se comprueban con su propia dirección."
+   },
+   "options_skip_save": {
+      "message": "Guardar lista"
+   },
+   "options_title": {
+      "message": "Configuración de TextCache"
+   },
+   "options_unit_kb": {
+      "message": "KB"
+   },
+   "options_unit_texts": {
+      "message": "de los textos guardados"
+   },
+   "options_usage_count": {
+      "message": "Textos guardados"
+   },
+   "options_usage_space": {
+      "message": "Espacio usado"
+   },
+   "options_usage_space_of": {
+      "message": "$1 de $2"
+   },
+   "popup_back": {
+      "message": "Todos los textos guardados"
+   },
+   "popup_copy_one": {
+      "message": "Copiar el texto guardado en $1"
+   },
+   "popup_detail_meta": {
+      "message": "$1, último cambio: $2"
+   },
+   "popup_more": {
+      "message": "Aquí se muestran los $1 más recientes de $2. La lista completa los tiene todos."
+   },
+   "popup_none_here": {
+      "message": "No hay nada guardado en este sitio"
+   },
+   "popup_none_here_hint": {
+      "message": "Desactiva «Este sitio» para ver los textos guardados en todas partes."
+   },
+   "popup_open_list": {
+      "message": "Abrir la lista completa"
+   },
+   "popup_this_site": {
+      "message": "Este sitio"
+   },
+   "status_copied": {
+      "message": "Copiado"
+   },
+   "status_deleted": {
+      "message": "Eliminados: $1"
+   },
+   "status_deleted_all": {
+      "message": "Se eliminaron todos los textos guardados"
+   },
+   "status_failed": {
+      "message": "No funcionó: $1"
+   },
+   "status_not_saved": {
+      "message": "No guardado: $1"
+   },
+   "status_saved": {
+      "message": "Guardado"
+   },
+   "time_just_now": {
+      "message": "ahora mismo"
+   },
+   "time_unknown": {
+      "message": "desconocido"
+   }
+}

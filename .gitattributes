@@ -1,0 +1,2 @@
+# Keep every file byte for byte: manifest.json and _locales are CRLF, the rest is LF.
+* -text

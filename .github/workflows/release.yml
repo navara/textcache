@@ -1,0 +1,70 @@
+name: Release
+
+# Cut a release by pushing a tag that matches the version in extension/manifest.json:
+#   git tag v1.1 && git push origin v1.1
+# The tag is checked, the unit tests run, the zip is built, and only if every step passes is the GitHub release published with the zip and SHA256SUMS
+# attached. The browser test (npm run test:e2e) is not run here: it needs a full Chromium with the extension loaded; run it locally before tagging.
+# Running it by hand (workflow_dispatch) is a dry run: everything but the release itself, with the zip kept as a workflow artifact.
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+
+      # node --test with a glob and the tests themselves need a current Node
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Tag matches the manifest version
+        id: version
+        env:
+          TAG: ${{ github.ref_name }}
+          IS_TAG: ${{ github.ref_type == 'tag' }}
+        run: |
+          version=$(node -p "require('./extension/manifest.json').version")
+          if [ "$IS_TAG" = "true" ] && [ "v$version" != "$TAG" ]; then
+            echo "::error::Tag $TAG does not match version $version in extension/manifest.json; bump the version or fix the tag."
+            exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Build the zip
+        run: npm run pack
+
+      - name: Checksums
+        working-directory: dist
+        run: sha256sum * > SHA256SUMS && cat SHA256SUMS
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: textcache-${{ steps.version.outputs.version }}
+          path: dist/*
+          if-no-files-found: error
+
+      - name: Publish the release
+        if: github.ref_type == 'tag'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: >-
+          gh release create "$TAG" dist/*
+          --verify-tag --title "TextCache $VERSION" --generate-notes

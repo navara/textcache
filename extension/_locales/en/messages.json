@@ -1,0 +1,296 @@
+{
+   "app_name": {
+      "message": "TextCache"
+   },
+   "badge_save_failed": {
+      "message": "TextCache could not save: $1"
+   },
+   "badge_too_large": {
+      "message": "TextCache did not save a text in this tab: its size ($1) is over the limit ($2)"
+   },
+   "confirm_cancel": {
+      "message": "Cancel"
+   },
+   "confirm_delete_all": {
+      "message": "Delete every saved text ($1 in all)? Deleted texts cannot be recovered. Your settings stay as they are."
+   },
+   "confirm_delete_all_ok": {
+      "message": "Delete all"
+   },
+   "confirm_delete_selected": {
+      "message": "Delete the selected saved texts ($1)? Deleted texts cannot be recovered."
+   },
+   "confirm_delete_selected_ok": {
+      "message": "Delete selected"
+   },
+   "copy": {
+      "message": "Copy"
+   },
+   "day_today": {
+      "message": "Today"
+   },
+   "day_unknown": {
+      "message": "No date"
+   },
+   "day_yesterday": {
+      "message": "Yesterday"
+   },
+   "delete": {
+      "message": "Delete"
+   },
+   "empty_hint": {
+      "message": "Type into a text area or a rich-text editor on any web page, and the text shows up here."
+   },
+   "empty_title": {
+      "message": "Nothing saved yet"
+   },
+   "entry_untitled": {
+      "message": "Untitled page"
+   },
+   "ext_description": {
+      "message": "Saves what you type into text fields, so that it can be recovered."
+   },
+   "kind_formatted": {
+      "message": "formatted"
+   },
+   "list_copy_html": {
+      "message": "Copy as HTML"
+   },
+   "list_copy_text": {
+      "message": "Copy text"
+   },
+   "list_count": {
+      "message": "Saved texts: $1"
+   },
+   "list_count_filtered": {
+      "message": "Showing $1 of $2 saved texts"
+   },
+   "list_delete_all": {
+      "message": "Delete all"
+   },
+   "list_delete_selected": {
+      "message": "Delete selected ($1)"
+   },
+   "list_detail_meta": {
+      "message": "Last changed $1, started $2, $3 characters, $4"
+   },
+   "list_detail_none": {
+      "message": "Pick a saved text from the list to read it here."
+   },
+   "list_formatted_label": {
+      "message": "Saved text with its formatting"
+   },
+   "list_no_matches": {
+      "message": "No saved text matches"
+   },
+   "list_no_matches_hint": {
+      "message": "Try fewer or shorter words. The search looks at the address, the page title and the text."
+   },
+   "list_search_label": {
+      "message": "Search saved texts"
+   },
+   "list_search_placeholder": {
+      "message": "Search address, title and text"
+   },
+   "list_select_all": {
+      "message": "Select all shown"
+   },
+   "list_select_one": {
+      "message": "Select $1"
+   },
+   "list_show_formatting": {
+      "message": "Show formatting"
+   },
+   "list_text_label": {
+      "message": "Saved text"
+   },
+   "list_title": {
+      "message": "Saved texts"
+   },
+   "load_failed": {
+      "message": "The saved texts could not be loaded: $1"
+   },
+   "nav_label": {
+      "message": "Pages"
+   },
+   "nav_list": {
+      "message": "Saved texts"
+   },
+   "nav_settings": {
+      "message": "Settings"
+   },
+   "options_autoClean": {
+      "message": "Delete older saved texts automatically"
+   },
+   "options_autoClean_desc": {
+      "message": "Clean-up runs when the browser starts and once an hour. Deleted texts cannot be recovered."
+   },
+   "options_dedupe": {
+      "message": "Remove older copies of the same text"
+   },
+   "options_dedupe_desc": {
+      "message": "When two saved texts hold the same text, only the most recently changed one is kept, whatever page it came from. This runs when you leave a text field and with every clean-up."
+   },
+   "options_deleteAll": {
+      "message": "Delete all saved texts"
+   },
+   "options_deleteAll_button": {
+      "message": "Delete all saved texts"
+   },
+   "options_deleteAll_desc": {
+      "message": "Removes every saved text at once. Your settings and the list of pages to skip stay."
+   },
+   "options_export": {
+      "message": "Export all saved texts"
+   },
+   "options_export_button": {
+      "message": "Export CSV"
+   },
+   "options_export_desc": {
+      "message": "Downloads a CSV file with the address, title, times and content of every saved text."
+   },
+   "options_group_cleanup": {
+      "message": "Clean-up"
+   },
+   "options_group_display": {
+      "message": "Display"
+   },
+   "options_group_saving": {
+      "message": "Saving"
+   },
+   "options_group_saving_intro": {
+      "message": "Text areas and rich-text editors are saved shortly after each change, however the change was made: typing, pasting, dictation or autocorrect. Single-line fields, such as search boxes and login forms, are never saved. Changes here reach open pages straight away."
+   },
+   "options_group_storage": {
+      "message": "Storage"
+   },
+   "options_invalid_keep": {
+      "message": "Enter a whole number, 1 or more. This value was not saved."
+   },
+   "options_invalid_size": {
+      "message": "Enter a whole number, 0 or more. This value was not saved."
+   },
+   "options_keepNewest": {
+      "message": "Keep the newest"
+   },
+   "options_keepNewest_desc": {
+      "message": "Clean-up keeps this many of the most recently changed saved texts and deletes the rest."
+   },
+   "options_language": {
+      "message": "Display language"
+   },
+   "options_language_auto": {
+      "message": "Automatic (browser language): $1"
+   },
+   "options_language_desc": {
+      "message": "Automatic uses the language of your browser, or English if TextCache does not have it."
+   },
+   "options_lead": {
+      "message": "TextCache keeps a copy of what you type into text areas, so you can get it back after a page crashes or a form is lost. Every change here is saved as soon as you make it."
+   },
+   "options_maxItemKb": {
+      "message": "Largest text to save"
+   },
+   "options_maxItemKb_desc": {
+      "message": "A text bigger than this is not saved: the last version that fitted is kept, and the toolbar icon shows a badge on that tab. In rich-text editors the formatting (HTML) counts towards the size. 0 means no limit."
+   },
+   "options_popupWidth": {
+      "message": "Width of the pop-up"
+   },
+   "options_popupWidth_desc": {
+      "message": "How wide the window is that opens from the toolbar icon. It applies the next time the pop-up opens."
+   },
+   "options_popupWidth_narrow": {
+      "message": "Narrow"
+   },
+   "options_popupWidth_normal": {
+      "message": "Normal"
+   },
+   "options_popupWidth_wide": {
+      "message": "Wide"
+   },
+   "options_preview_none": {
+      "message": "With these settings the next clean-up deletes nothing. Saved texts: $1."
+   },
+   "options_preview_off": {
+      "message": "Automatic clean-up is off, so saved texts are only deleted when you delete them."
+   },
+   "options_preview_some": {
+      "message": "With these settings the next clean-up deletes $1 of $2 saved texts."
+   },
+   "options_skip": {
+      "message": "Pages to skip"
+   },
+   "options_skip_desc": {
+      "message": "One entry per line. Nothing is saved on a page whose address contains an entry anywhere in it, so slack.com also covers app.slack.com. Embedded frames are checked against their own address."
+   },
+   "options_skip_save": {
+      "message": "Save list"
+   },
+   "options_title": {
+      "message": "TextCache settings"
+   },
+   "options_unit_kb": {
+      "message": "KB"
+   },
+   "options_unit_texts": {
+      "message": "saved texts"
+   },
+   "options_usage_count": {
+      "message": "Saved texts"
+   },
+   "options_usage_space": {
+      "message": "Space used"
+   },
+   "options_usage_space_of": {
+      "message": "$1 of $2"
+   },
+   "popup_back": {
+      "message": "All saved texts"
+   },
+   "popup_copy_one": {
+      "message": "Copy the text saved on $1"
+   },
+   "popup_detail_meta": {
+      "message": "$1, last changed $2"
+   },
+   "popup_more": {
+      "message": "The newest $1 of $2 are shown here. The full list has them all."
+   },
+   "popup_none_here": {
+      "message": "Nothing saved on this site"
+   },
+   "popup_none_here_hint": {
+      "message": "Switch off \"This site\" to see the texts saved everywhere."
+   },
+   "popup_open_list": {
+      "message": "Open full list"
+   },
+   "popup_this_site": {
+      "message": "This site"
+   },
+   "status_copied": {
+      "message": "Copied"
+   },
+   "status_deleted": {
+      "message": "Deleted: $1"
+   },
+   "status_deleted_all": {
+      "message": "All saved texts deleted"
+   },
+   "status_failed": {
+      "message": "That did not work: $1"
+   },
+   "status_not_saved": {
+      "message": "Not saved: $1"
+   },
+   "status_saved": {
+      "message": "Saved"
+   },
+   "time_just_now": {
+      "message": "just now"
+   },
+   "time_unknown": {
+      "message": "unknown"
+   }
+}

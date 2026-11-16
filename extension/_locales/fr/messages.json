@@ -1,0 +1,296 @@
+{
+   "app_name": {
+      "message": "TextCache"
+   },
+   "badge_save_failed": {
+      "message": "TextCache n’a pas pu enregistrer : $1"
+   },
+   "badge_too_large": {
+      "message": "TextCache n’a pas enregistré un texte dans cet onglet : sa taille ($1) dépasse la limite ($2)"
+   },
+   "confirm_cancel": {
+      "message": "Annuler"
+   },
+   "confirm_delete_all": {
+      "message": "Supprimer tous les textes enregistrés ($1 au total) ? Les textes supprimés ne peuvent pas être récupérés. Vos paramètres ne changent pas."
+   },
+   "confirm_delete_all_ok": {
+      "message": "Tout supprimer"
+   },
+   "confirm_delete_selected": {
+      "message": "Supprimer les textes enregistrés sélectionnés ($1) ? Les textes supprimés ne peuvent pas être récupérés."
+   },
+   "confirm_delete_selected_ok": {
+      "message": "Supprimer la sélection"
+   },
+   "copy": {
+      "message": "Copier"
+   },
+   "day_today": {
+      "message": "Aujourd’hui"
+   },
+   "day_unknown": {
+      "message": "Sans date"
+   },
+   "day_yesterday": {
+      "message": "Hier"
+   },
+   "delete": {
+      "message": "Supprimer"
+   },
+   "empty_hint": {
+      "message": "Saisissez du texte dans une zone de texte ou un éditeur de texte enrichi sur n’importe quelle page web, et il apparaîtra ici."
+   },
+   "empty_title": {
+      "message": "Rien d’enregistré pour l’instant"
+   },
+   "entry_untitled": {
+      "message": "Page sans titre"
+   },
+   "ext_description": {
+      "message": "Enregistre ce que vous saisissez dans les champs de texte pour pouvoir le récupérer."
+   },
+   "kind_formatted": {
+      "message": "mis en forme"
+   },
+   "list_copy_html": {
+      "message": "Copier en HTML"
+   },
+   "list_copy_text": {
+      "message": "Copier le texte"
+   },
+   "list_count": {
+      "message": "Textes enregistrés : $1"
+   },
+   "list_count_filtered": {
+      "message": "Affichés : $1 sur $2"
+   },
+   "list_delete_all": {
+      "message": "Tout supprimer"
+   },
+   "list_delete_selected": {
+      "message": "Supprimer la sélection ($1)"
+   },
+   "list_detail_meta": {
+      "message": "Modifié : $1, commencé : $2, caractères : $3, $4"
+   },
+   "list_detail_none": {
+      "message": "Choisissez un texte enregistré dans la liste pour le lire ici."
+   },
+   "list_formatted_label": {
+      "message": "Texte enregistré avec sa mise en forme"
+   },
+   "list_no_matches": {
+      "message": "Aucun texte enregistré ne correspond"
+   },
+   "list_no_matches_hint": {
+      "message": "Essayez avec moins de mots ou des mots plus courts. La recherche porte sur l’adresse, le titre de la page et le texte."
+   },
+   "list_search_label": {
+      "message": "Rechercher dans les textes enregistrés"
+   },
+   "list_search_placeholder": {
+      "message": "Rechercher dans l’adresse, le titre et le texte"
+   },
+   "list_select_all": {
+      "message": "Tout sélectionner"
+   },
+   "list_select_one": {
+      "message": "Sélectionner $1"
+   },
+   "list_show_formatting": {
+      "message": "Afficher la mise en forme"
+   },
+   "list_text_label": {
+      "message": "Texte enregistré"
+   },
+   "list_title": {
+      "message": "Textes enregistrés"
+   },
+   "load_failed": {
+      "message": "Impossible de charger les textes enregistrés : $1"
+   },
+   "nav_label": {
+      "message": "Pages"
+   },
+   "nav_list": {
+      "message": "Textes enregistrés"
+   },
+   "nav_settings": {
+      "message": "Paramètres"
+   },
+   "options_autoClean": {
+      "message": "Supprimer automatiquement les textes enregistrés les plus anciens"
+   },
+   "options_autoClean_desc": {
+      "message": "Le nettoyage a lieu au démarrage du navigateur et une fois par heure. Les textes supprimés ne peuvent pas être récupérés."
+   },
+   "options_dedupe": {
+      "message": "Retirer les anciennes copies d’un même texte"
+   },
+   "options_dedupe_desc": {
+      "message": "Quand deux textes enregistrés contiennent le même texte, seul le plus récemment modifié est conservé, quelle que soit la page d’origine. Cela se fait quand vous quittez un champ de texte et à chaque nettoyage."
+   },
+   "options_deleteAll": {
+      "message": "Supprimer tous les textes enregistrés"
+   },
+   "options_deleteAll_button": {
+      "message": "Supprimer tous les textes enregistrés"
+   },
+   "options_deleteAll_desc": {
+      "message": "Retire tous les textes enregistrés d’un coup. Vos paramètres et la liste des pages ignorées sont conservés."
+   },
+   "options_export": {
+      "message": "Exporter tous les textes enregistrés"
+   },
+   "options_export_button": {
+      "message": "Exporter en CSV"
+   },
+   "options_export_desc": {
+      "message": "Télécharge un fichier CSV avec l’adresse, le titre, les dates et le contenu de chaque texte enregistré."
+   },
+   "options_group_cleanup": {
+      "message": "Nettoyage"
+   },
+   "options_group_display": {
+      "message": "Affichage"
+   },
+   "options_group_saving": {
+      "message": "Enregistrement"
+   },
+   "options_group_saving_intro": {
+      "message": "Les zones de texte et les éditeurs de texte enrichi sont enregistrés peu après chaque modification, quelle qu’en soit l’origine : saisie, collage, dictée ou correction automatique. Les champs d’une seule ligne, comme les champs de recherche et les formulaires de connexion, ne sont jamais enregistrés. Les modifications faites ici s’appliquent tout de suite aux pages ouvertes."
+   },
+   "options_group_storage": {
+      "message": "Stockage"
+   },
+   "options_invalid_keep": {
+      "message": "Saisissez un nombre entier supérieur ou égal à 1. Cette valeur n’a pas été enregistrée."
+   },
+   "options_invalid_size": {
+      "message": "Saisissez un nombre entier supérieur ou égal à 0. Cette valeur n’a pas été enregistrée."
+   },
+   "options_keepNewest": {
+      "message": "Conserver les plus récents"
+   },
+   "options_keepNewest_desc": {
+      "message": "Le nettoyage conserve ce nombre de textes enregistrés parmi les plus récemment modifiés et supprime les autres."
+   },
+   "options_language": {
+      "message": "Langue d’affichage"
+   },
+   "options_language_auto": {
+      "message": "Automatique (langue du navigateur) : $1"
+   },
+   "options_language_desc": {
+      "message": "Le mode automatique utilise la langue de votre navigateur, ou l’anglais si TextCache ne la propose pas."
+   },
+   "options_lead": {
+      "message": "TextCache garde une copie de ce que vous saisissez dans les zones de texte, pour que vous puissiez le récupérer si une page plante ou si un formulaire est perdu. Chaque modification faite ici est enregistrée immédiatement."
+   },
+   "options_maxItemKb": {
+      "message": "Taille maximale d’un texte enregistré"
+   },
+   "options_maxItemKb_desc": {
+      "message": "Un texte plus grand n’est pas enregistré : la dernière version qui tenait est conservée, et l’icône de la barre d’outils affiche un badge sur cet onglet. Dans les éditeurs de texte enrichi, la mise en forme (HTML) compte dans la taille. 0 signifie sans limite."
+   },
+   "options_popupWidth": {
+      "message": "Largeur de la fenêtre contextuelle"
+   },
+   "options_popupWidth_desc": {
+      "message": "Largeur de la fenêtre qui s’ouvre depuis l’icône de la barre d’outils. S’applique à la prochaine ouverture de la fenêtre."
+   },
+   "options_popupWidth_narrow": {
+      "message": "Étroite"
+   },
+   "options_popupWidth_normal": {
+      "message": "Normale"
+   },
+   "options_popupWidth_wide": {
+      "message": "Large"
+   },
+   "options_preview_none": {
+      "message": "Avec ces paramètres, le prochain nettoyage ne supprime rien. Textes enregistrés : $1."
+   },
+   "options_preview_off": {
+      "message": "Le nettoyage automatique est désactivé : les textes enregistrés ne sont supprimés que lorsque vous les supprimez."
+   },
+   "options_preview_some": {
+      "message": "Textes enregistrés que le prochain nettoyage supprimera avec ces paramètres : $1 sur $2."
+   },
+   "options_skip": {
+      "message": "Pages ignorées"
+   },
+   "options_skip_desc": {
+      "message": "Une entrée par ligne. Rien n’est enregistré sur une page dont l’adresse contient une entrée, à n’importe quel endroit : slack.com couvre donc aussi app.slack.com. Les cadres intégrés sont vérifiés d’après leur propre adresse."
+   },
+   "options_skip_save": {
+      "message": "Enregistrer la liste"
+   },
+   "options_title": {
+      "message": "Paramètres de TextCache"
+   },
+   "options_unit_kb": {
+      "message": "KB"
+   },
+   "options_unit_texts": {
+      "message": "parmi les textes enregistrés"
+   },
+   "options_usage_count": {
+      "message": "Textes enregistrés"
+   },
+   "options_usage_space": {
+      "message": "Espace utilisé"
+   },
+   "options_usage_space_of": {
+      "message": "$1 sur $2"
+   },
+   "popup_back": {
+      "message": "Tous les textes enregistrés"
+   },
+   "popup_copy_one": {
+      "message": "Copier le texte enregistré sur $1"
+   },
+   "popup_detail_meta": {
+      "message": "$1, modifié : $2"
+   },
+   "popup_more": {
+      "message": "Les $1 plus récents sur $2 sont affichés ici. La liste complète les contient tous."
+   },
+   "popup_none_here": {
+      "message": "Rien d’enregistré sur ce site"
+   },
+   "popup_none_here_hint": {
+      "message": "Désactivez « Ce site » pour voir les textes enregistrés partout."
+   },
+   "popup_open_list": {
+      "message": "Ouvrir la liste complète"
+   },
+   "popup_this_site": {
+      "message": "Ce site"
+   },
+   "status_copied": {
+      "message": "Copié"
+   },
+   "status_deleted": {
+      "message": "Supprimés : $1"
+   },
+   "status_deleted_all": {
+      "message": "Tous les textes enregistrés ont été supprimés"
+   },
+   "status_failed": {
+      "message": "Échec : $1"
+   },
+   "status_not_saved": {
+      "message": "Non enregistré : $1"
+   },
+   "status_saved": {
+      "message": "Enregistré"
+   },
+   "time_just_now": {
+      "message": "à l’instant"
+   },
+   "time_unknown": {
+      "message": "inconnu"
+   }
+}

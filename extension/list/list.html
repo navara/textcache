@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="list_title"></title>
+    <link rel="stylesheet" href="/ui/base.css">
+    <link rel="stylesheet" href="./list.css">
+    <script type="module" src="./list.js"></script>
+</head>
+<body>
+<header class="appbar">
+    <div class="appbar-inner">
+        <span class="brand"><img src="/icons/icon-48.png" alt="" width="24" height="24"><span data-i18n="app_name"></span></span>
+        <nav class="nav" data-i18n-attr="aria-label:nav_label">
+            <a href="/list/list.html" aria-current="page" data-i18n="nav_list"></a>
+            <a href="/options/options.html" data-i18n="nav_settings"></a>
+        </nav>
+    </div>
+</header>
+
+<main class="workspace">
+    <section class="browser" data-i18n-attr="aria-label:list_title">
+        <div class="finder">
+            <label class="visually-hidden" for="search" data-i18n="list_search_label"></label>
+            <input class="search" type="search" id="search" autocomplete="off" spellcheck="false"
+                data-i18n-attr="placeholder:list_search_placeholder" aria-describedby="count">
+            <p class="count muted" id="count" aria-live="polite"></p>
+        </div>
+
+        <div class="bulkbar">
+            <label class="select-all">
+                <input type="checkbox" id="selectAll">
+                <span data-i18n="list_select_all"></span>
+            </label>
+            <span class="bulk-actions">
+                <button type="button" class="button quiet small danger" id="deleteSelected" disabled></button>
+                <button type="button" class="button quiet small" id="deleteAll" data-i18n="list_delete_all"></button>
+            </span>
+        </div>
+
+        <div class="entries" id="entries"></div>
+        <p class="empty" id="noMatches" hidden><strong data-i18n="list_no_matches"></strong><span data-i18n="list_no_matches_hint"></span></p>
+        <p class="empty" id="loadError" role="alert" hidden></p>
+        <p class="empty" id="empty" hidden><strong data-i18n="empty_title"></strong><span data-i18n="empty_hint"></span></p>
+    </section>
+
+    <section class="detail group" id="detail" aria-labelledby="detailTitle">
+        <p class="empty detail-none" id="detailNone" data-i18n="list_detail_none"></p>
+        <article class="detail-body" id="detailBody" hidden>
+            <header class="detail-head">
+                <h2 class="detail-title" id="detailTitle" dir="auto"></h2>
+                <p class="detail-address" id="detailAddress" dir="auto"></p>
+                <p class="detail-meta muted" id="detailMeta"></p>
+            </header>
+            <div class="detail-actions">
+                <button type="button" class="button" id="copyText" data-i18n="list_copy_text"></button>
+                <button type="button" class="button quiet" id="copyHtml" data-i18n="list_copy_html"></button>
+                <label class="switch-label" id="formattingToggle">
+                    <input class="switch" type="checkbox" id="showFormatting">
+                    <span data-i18n="list_show_formatting"></span>
+                </label>
+                <button type="button" class="button quiet danger" id="deleteOne" data-i18n="delete"></button>
+            </div>
+            <pre class="reading" id="detailText" tabindex="0" dir="auto" data-i18n-attr="aria-label:list_text_label"></pre>
+            <iframe class="reading-frame" id="detailFrame" sandbox="" data-i18n-attr="title:list_formatted_label" hidden></iframe>
+        </article>
+    </section>
+</main>
+
+<p class="status" id="status" role="status" aria-live="polite"></p>
+
+<dialog class="confirm" id="confirm">
+    <form method="dialog">
+        <p id="confirmText"></p>
+        <div class="confirm-actions">
+            <button type="submit" class="button quiet" id="confirmCancel" value="cancel" data-i18n="confirm_cancel"></button>
+            <button type="submit" class="button danger" id="confirmOk" value="ok"></button>
+        </div>
+    </form>
+</dialog>
+</body>
+</html>
