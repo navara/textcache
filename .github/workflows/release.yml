@@ -68,3 +68,75 @@ jobs:
         run: >-
           gh release create "$TAG" dist/*
           --verify-tag --title "TextCache $VERSION" --generate-notes
+
+  # Submits the store zip to the Chrome Web Store as a new version of the existing item, after the GitHub release. It signs in to Google without a
+  # stored key: GitHub's OIDC token is exchanged through Workload Identity Federation for a one-hour access token of a service account that is linked
+  # in the Web Store dashboard (setup: store/publishing.md). The four repository variables hold no secrets; the job is skipped until they are set.
+  # On a tag it uploads and submits for review (the item publishes itself when approved). Run by hand, it only reads the item's status, which
+  # proves the sign-in and the IDs without changing anything in the store.
+  store:
+    needs: release
+    if: vars.CWS_ITEM_ID != ''
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      ITEM: https://chromewebstore.googleapis.com/v2/publishers/${{ vars.CWS_PUBLISHER_ID }}/items/${{ vars.CWS_ITEM_ID }}
+      UPLOAD: https://chromewebstore.googleapis.com/upload/v2/publishers/${{ vars.CWS_PUBLISHER_ID }}/items/${{ vars.CWS_ITEM_ID }}:upload
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Sign in to Google as the publishing service account
+        id: google
+        uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/chromewebstore
+          create_credentials_file: false
+
+      - name: Item status before
+        env:
+          TOKEN: ${{ steps.google.outputs.access_token }}
+        run: |
+          echo "::add-mask::$TOKEN"
+          curl --fail-with-body -sS -H "Authorization: Bearer $TOKEN" "$ITEM:fetchStatus" | jq .
+
+      - name: Build the store zip
+        if: github.ref_type == 'tag'
+        run: npm run pack:store
+
+      # The upload can finish later (uploadState IN_PROGRESS); fetchStatus then reports it as lastAsyncUploadState. The store refuses a version that
+      # is not higher than the last one it has, which the tag check of the release job has tied to the manifest.
+      - name: Upload the new version
+        if: github.ref_type == 'tag'
+        env:
+          TOKEN: ${{ steps.google.outputs.access_token }}
+        run: |
+          echo "::add-mask::$TOKEN"
+          zip=$(ls dist/textcache-*-store.zip)
+          state=$(curl --fail-with-body -sS -H "Authorization: Bearer $TOKEN" -X POST -T "$zip" "$UPLOAD" | tee /dev/stderr | jq -r .uploadState)
+          for attempt in $(seq 1 30); do
+            [ "$state" = "IN_PROGRESS" ] || break
+            sleep 10
+            state=$(curl --fail-with-body -sS -H "Authorization: Bearer $TOKEN" "$ITEM:fetchStatus" | jq -r .lastAsyncUploadState)
+          done
+          if [ "$state" != "SUCCEEDED" ]; then
+            echo "::error::Upload of $zip ended in state $state."
+            exit 1
+          fi
+
+      - name: Submit for review
+        if: github.ref_type == 'tag'
+        env:
+          TOKEN: ${{ steps.google.outputs.access_token }}
+        run: |
+          echo "::add-mask::$TOKEN"
+          curl --fail-with-body -sS -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -X POST \
+            -d '{"publishType": "DEFAULT_PUBLISH"}' "$ITEM:publish" | jq .
