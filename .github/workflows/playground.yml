@@ -1,0 +1,41 @@
+name: Playground
+
+# Publishes test/playground/index.html with GitHub Pages at https://navara.github.io/textcache/, so the scenarios can run on a public https page
+# (content scripts do not run on file: pages). Runs when the page changes on main, or by hand.
+on:
+  push:
+    branches: [main]
+    paths: ["test/playground/index.html"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+
+      # only the page: serve.cjs is the local server and is not part of the site
+      - name: Collect the site
+        run: mkdir _site && cp test/playground/index.html _site/
+
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+      - id: deploy
+        uses: actions/deploy-pages@v5
