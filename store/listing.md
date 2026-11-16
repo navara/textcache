@@ -96,7 +96,8 @@ Upload `dist/textcache-<version>-store.zip` from `npm run pack:store`: the files
 
 ## Test instructions tab
 
-Written in Simplified Technical English, 451 of the 500 characters the field allows. Checked on 2026-11-16: text typed into pastebin.com is saved.
+Written in Simplified Technical English (skaffff/ste-writing-skill), 458 of the 500 characters the field allows. Checked on 2026-11-16 with the
+extension in Chromium: text typed into pastebin.com is saved, and all 12 scenarios of the hosted playground give the expected table.
 
 ```text
 No account is necessary.
@@ -106,6 +107,5 @@ No account is necessary.
 4. Click the TextCache icon in the toolbar. The popup shows the text.
 5. Click "Copy". The clipboard contains the text.
 6. Click "Open full list". The full list shows the text.
-7. In the search field, type one word of the text. The list shows only that text.
-TextCache does not save password fields or search boxes. TextCache sends no data.
+Alternative test (12 automatic scenarios): open https://navara.github.io/textcache/?autorun. When the page shows "done", compare the full list with the table on the page.
 ```
