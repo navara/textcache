@@ -5,3 +5,4 @@ STOP
 node_modules/
 .worktrees/
 dist/
+_mdview_*.html
