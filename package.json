@@ -9,7 +9,8 @@
   "scripts": {
     "test": "node --test \"test/unit/*.test.js\"",
     "test:e2e": "node test/e2e.cjs",
-    "pack": "node tools/pack.cjs"
+    "pack": "node tools/pack.cjs",
+    "pack:store": "node tools/pack.cjs --store"
   },
   "devDependencies": {
     "playwright-core": "^1.65.1"

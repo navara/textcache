@@ -1,5 +1,7 @@
 // Builds dist/textcache-<version>.zip from extension/: a folder textcache-<version>/ to unzip and load with "Load unpacked", plus INSTALL.txt.
-// The version is the manifest's. Usage: node tools/pack.cjs  (prints the path of the zip)
+// With --store it builds dist/textcache-<version>-store.zip for the Chrome Web Store instead: the files at the zip's root, and the manifest without
+// its "key". The store gives the item its own ID either way; whether it accepts an upload with a key is not documented, so the key is left out.
+// The version is the manifest's. Usage: node tools/pack.cjs [--store]  (prints the path of the zip)
 // The zip is written here, without a dependency: stored file names are UTF-8, entries are deflated, and times are fixed, so the same tree always
 // gives the same bytes.
 const fs = require('node:fs');
@@ -10,6 +12,7 @@ const root = path.join(__dirname, '..');
 const source = path.join(root, 'extension');
 const { version } = JSON.parse(fs.readFileSync(path.join(source, 'manifest.json'), 'utf8'));
 const folder = `textcache-${version}`;
+const store = process.argv.includes('--store');
 
 const INSTALL = [
     `TextCache ${version}`,
@@ -86,8 +89,22 @@ function zip(files) {
     return Buffer.concat([...parts, directoryBytes, end]);
 }
 
-const files = [...filesUnder(source), { name: 'INSTALL.txt', data: Buffer.from(INSTALL, 'utf8') }].map(f => ({ ...f, name: `${folder}/${f.name}` }));
-const out = path.join(root, 'dist', `${folder}.zip`);
+// the store copy of the manifest is the same bytes without the line that holds the top-level key; the parsed result must equal the manifest minus
+// its key and nothing else, so a nested "key" or a key written differently stops the build instead of shipping a changed manifest
+function withoutKey(data) {
+    const text = data.toString('utf8');
+    const expected = JSON.parse(text);
+    if (!('key' in expected)) throw new Error('manifest.json has no top-level "key" to drop for the store build');
+    delete expected.key;
+    const stripped = text.replace(/^ *"key": "[^"]*",\r\n/m, '');
+    if (JSON.stringify(JSON.parse(stripped)) !== JSON.stringify(expected)) throw new Error('manifest.json: the "key" line could not be dropped cleanly');
+    return Buffer.from(stripped, 'utf8');
+}
+
+const files = store
+    ? filesUnder(source).map(f => (f.name === 'manifest.json' ? { ...f, data: withoutKey(f.data) } : f))
+    : [...filesUnder(source), { name: 'INSTALL.txt', data: Buffer.from(INSTALL, 'utf8') }].map(f => ({ ...f, name: `${folder}/${f.name}` }));
+const out = path.join(root, 'dist', `${folder}${store ? '-store' : ''}.zip`);
 fs.mkdirSync(path.dirname(out), { recursive: true });
 fs.writeFileSync(out, zip(files));
 console.log(out);
