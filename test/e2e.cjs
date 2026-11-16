@@ -250,7 +250,7 @@ const noHorizontalScroll = page => page.evaluate(() => {
         assert.strictEqual(extId, EXT_ID, 'the ID no longer comes from the manifest key');
         let opt = await openExt(ctx, 'options/options.html');
         await optionsReady(opt);
-        assert.strictEqual(await opt.evaluate(() => chrome.runtime.getManifest().version), '1.0');
+        assert.strictEqual(await opt.evaluate(() => chrome.runtime.getManifest().version), '1.1');
         const icons = await opt.evaluate(async () => {
             const { icons: sizes, action } = chrome.runtime.getManifest();
             const files = [...new Set([...Object.values(sizes), ...Object.values(action.default_icon)])];
@@ -269,7 +269,7 @@ const noHorizontalScroll = page => page.evaluate(() => {
         assert.ok(alarm && alarm.periodInMinutes === 60, `hourly alarm "clean" missing: ${JSON.stringify(alarm)}`);
         assert.strictEqual((await until(() => storedSettings(opt), s => s))?.schema, 2, 'the background did not write the settings at install');
         assert.deepStrictEqual(errors.filter(e => e.startsWith('service worker')), []);
-        step(`extension loads with id ${extId}, version 1.0, icons 16/32/48/128 load at their sizes; the worker wrote the settings and the hourly `
+        step(`extension loads with id ${extId}, version 1.1, icons 16/32/48/128 load at their sizes; the worker wrote the settings and the hourly `
             + 'alarm, no service worker error');
 
         // 12. options (first, while the profile still has its defaults)

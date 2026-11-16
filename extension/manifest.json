@@ -36,5 +36,5 @@
       "page": "options/options.html"
    },
    "permissions": [ "storage", "unlimitedStorage", "alarms", "clipboardWrite", "activeTab" ],
-   "version": "1.0"
+   "version": "1.1"
 }
