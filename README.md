@@ -3,15 +3,22 @@
 A Chrome extension that keeps a copy of what you type into text areas and rich-text editors, so you can get the text back after a page crashes or a form
 is lost. Everything stays in your browser; nothing is sent anywhere.
 
-Works in Chrome, Brave, Edge and other Chromium browsers. It is not in the Chrome Web Store.
+Works in Chrome, Brave, Edge and other Chromium browsers.
 
 ## Install
+
+Install TextCache from the [Chrome Web Store](https://chromewebstore.google.com/detail/textcache/nlcmfgfjlbenaojmhnepjklepcinpfda). The browser then
+updates it automatically.
+
+### Without the Web Store
 
 1. Download `textcache-<version>.zip` from the [latest release](https://github.com/navara/textcache/releases/latest) and unzip it somewhere permanent.
 2. Open `chrome://extensions` and switch on "Developer mode".
 3. Press "Load unpacked" and pick the unzipped `textcache-<version>` folder.
 
 To update, replace the folder's contents with the new version and press the reload arrow on the extension's card. Saved texts and settings stay.
+
+The Web Store copy and a copy loaded this way are separate extensions: each keeps its own saved texts and settings.
 
 ## Development
 
